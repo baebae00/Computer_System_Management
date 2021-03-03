@@ -7,7 +7,7 @@
   - VMware
     ![vmware](https://user-images.githubusercontent.com/77660379/109816988-b7678f00-7c74-11eb-8a46-ae8857d4be55.JPG)
   - Ubuntu Desktop
-    <img src="https://github.com/baebae00/Computer_System_Management/issues/2#issue-821143208" width="700" height="400">
+    ![ubuntu_desktop](https://user-images.githubusercontent.com/77660379/109817514-5be9d100-7c75-11eb-8279-ba6a14c3bb69.JPG)
     
   - Ubuntu Server
     <img src="Capri_Island.jpeg" width="700">
