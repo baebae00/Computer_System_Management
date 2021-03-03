@@ -6,7 +6,7 @@
   - 가상머신
   - Server
   - Server(b)
-   +  Client
+  -  Client
 
 * 관리자 설정
 * 부팅 및 로그인 화면
