@@ -5,8 +5,8 @@
 
 * ### **가상머신과 3개의 리눅스 운영체제 설치**
   
-  * [x] 프로그램을 설치할 때 참고하면 좋은 Tip <br>
-    "LTS" 가 적혀있는 버전은 "가장 안정화된" 버전임을 뜻함
+  [x] CHECK POINT <br>
+  "LTS" 가 적혀있는 버전은 "가장 안정화된" 버전임을 뜻함
 
   - VMware
     ![vmware](https://user-images.githubusercontent.com/77660379/109816988-b7678f00-7c74-11eb-8a46-ae8857d4be55.JPG)
