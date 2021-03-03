@@ -5,7 +5,7 @@
 
 * ### **가상머신과 3개의 리눅스 운영체제 설치**
   - VMware
-    <img src="vmware.jpeg" width="700">
+    ![vmware](.CMS/image/vmware.jpeg)
   - Ubuntu Desktop
     <img src="Capri_Island.jpeg" width="700">
   - Ubuntu Server
