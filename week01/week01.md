@@ -9,16 +9,19 @@
   *"LTS" 가 적혀있는 버전은 "가장 안정화된" 버전임을 뜻함*
 
   - VMware
-  
+
     ![vmware](https://user-images.githubusercontent.com/77660379/109816988-b7678f00-7c74-11eb-8a46-ae8857d4be55.JPG)
   
   - Ubuntu Desktop
+  
     ![ubuntu_desktop](https://user-images.githubusercontent.com/77660379/109817514-5be9d100-7c75-11eb-8279-ba6a14c3bb69.JPG)
     
   - Ubuntu Server
+
     ![ubuntu_server](https://user-images.githubusercontent.com/77660379/109817962-d74b8280-7c75-11eb-93bd-aa8096cf5ca8.JPG)
   
   - Kubuntu
+
     ![kubuntu](https://user-images.githubusercontent.com/77660379/109818045-eb8f7f80-7c75-11eb-91d8-6a59b79f5a3f.JPG)
 
 * ### **관리자 설정**
