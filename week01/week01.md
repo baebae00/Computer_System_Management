@@ -16,9 +16,30 @@
   - Kubuntu
     ![kubuntu](https://user-images.githubusercontent.com/77660379/109818045-eb8f7f80-7c75-11eb-91d8-6a59b79f5a3f.JPG)
 
-
-
 * ### **관리자 설정**
+  - Server 설정
+    ```
+    터미널 열기
+    root 계정 활성화 (sudo su - root, passwd)
+    root 계정으로 로그인 (sudo su)
+    방화벽 설정 (ufw enable)
+    한영변환 (키보드 레이아웃 한국어로 변경, shift + space)
+    계정 로그아웃 (exit)
+    해상도 변경 (1024x768)
+    소프트웨어 자동 업데이트 해제
+    ```
+  - Server(b) 설정
+    ```
+    root 계정 활성화 (sudo su - root, passwd)
+    재부팅 (reboot)
+    방화벽 설정 (ufw enable)
+    컴퓨터 종료 (halt -p)
+    ```
+  - Kubuntu 설정
+    ```
+    해상도 변경 (1024x768)
+    ```
+    
 * ### **부팅 및 로그인 화면** <br>
     [부팅 및 로그인 화면 영상 URL](https://lsh424.tistory.com/37)
 
