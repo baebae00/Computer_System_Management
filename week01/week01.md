@@ -5,7 +5,7 @@
 
 * ### **가상머신과 3개의 리눅스 운영체제 설치**
   
-  [x] CHECK POINT <br>
+  * [x] CHECK POINT <br>
   "LTS" 가 적혀있는 버전은 "가장 안정화된" 버전임을 뜻함
 
   - VMware
