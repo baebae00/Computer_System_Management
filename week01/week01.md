@@ -6,7 +6,6 @@
 1. 리눅스, 커널, 배포판에 대해 이해
 2. 가상머신의 구조 파악
 3. 컴퓨터에 가상머신을 설치하고, 리눅스 실습 환경을 구축
-#### 을 학습하였습니다.
 ---
 
 ## 1. 실습과제 결과
@@ -21,15 +20,16 @@
     ![vmware](https://user-images.githubusercontent.com/77660379/109816988-b7678f00-7c74-11eb-8a46-ae8857d4be55.JPG)
   
   - Ubuntu Desktop
+      - 서버용으로 사용
 
     ![ubuntu_desktop](https://user-images.githubusercontent.com/77660379/109817514-5be9d100-7c75-11eb-8279-ba6a14c3bb69.JPG)
     
   - Ubuntu Server
-
+      - 서버용으로 사용
     ![ubuntu_server](https://user-images.githubusercontent.com/77660379/109817962-d74b8280-7c75-11eb-93bd-aa8096cf5ca8.JPG)
   
   - Kubuntu
-
+      - 서버에 접속하는 클라이언트용으로 사용
     ![kubuntu](https://user-images.githubusercontent.com/77660379/109818045-eb8f7f80-7c75-11eb-91d8-6a59b79f5a3f.JPG)
 
 * ### **관리자 설정**
@@ -102,7 +102,7 @@ VMware를 사용하기에 적합한 경우
        (3) LTS에 대한 지식을 미리 갖추고 있던 것
 
 2. 보완할 점 (-)
-    => 
+    => C드라이브와 D드라이브를 구분하여 파일을 정리하면 효율성을 높일 수 있음
       -> 평소 드라이브의 위치에 따른 사용에 대해 고민해 본 적이 없어 C드라이브만 사용했었음 
       -> 이번 기회를 통해 중요치않게 생각하고 넘겼던 작은 부분들에서도 지식의 차이가 발생할 수 있음을 깨닫게 됨
       -> 컴퓨터를 다룰때 사소한 부분까지도 각 기능을 생각해보며 배우려는 자세를 갖춰야할 필요가 있음
