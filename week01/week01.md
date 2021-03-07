@@ -57,7 +57,7 @@
     ```
 
 * ### **부팅 및 로그인 화면** <br>
-    [부팅 및 로그인 화면 영상 URL](https://lsh424.tistory.com/37)
+    [부팅 및 로그인 화면 영상 URL](https://baedevelog.tistory.com/5)
 
 ## 2. 실습과제 Review
 * ### **새로 배운 내용**
