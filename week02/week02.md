@@ -15,6 +15,9 @@
   **CHECK POINT** <br>
   *vmware 가상환경의 firefox웹사이트를 이용하면 실제 pc 환경과 연동시키지 않아도 파일을 업로드 할 수 있다*
 
+* ### **man.txt파일 -> tar.gz압축** <br>
+    [20200994.tar.gz URL](https://baedevelog.tistory.com/6)
+
   - man less
 
     ![man less](https://user-images.githubusercontent.com/77660379/111018670-7f431780-83fd-11eb-87c3-12e49cba1e32.JPG)
@@ -50,9 +53,6 @@
     ```
     해상도 변경 (1024x768)
     ```
-
-* ### **man.txt파일 -> tar.gz압축** <br>
-    [20200994.tar.gz URL](https://baedevelog.tistory.com/6)
 
 ## 2. 실습과제 Review
 * ### **새로 배운 내용**
