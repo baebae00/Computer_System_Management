@@ -36,14 +36,8 @@
     ![test 내 파일 삭제](https://user-images.githubusercontent.com/77660379/111018888-296f6f00-83ff-11eb-8363-16113050ea85.JPG)
 
     ```
-    터미널 열기
-    root 계정 활성화 (sudo su - root, passwd)
-    root 계정으로 로그인 (sudo su)
-    방화벽 설정 (ufw enable)
-    한영변환 (키보드 레이아웃 한국어로 변경, shift + space)
-    계정 로그아웃 (exit)
-    해상도 변경 (1024x768)
-    소프트웨어 자동 업데이트 해제
+    실습 강의를 보고 따라하는 과정에서 생성한 test 내 여러 파일들, 압축 파일들을 전부 제거하였다.
+    한번에 여러가지의 파일을 삭제하고 싶을 땐 -> rm -r test1.txt test2.txt 와 같이 rm -r * (* 자리에 제거할 파일명을 나열) 의 방법을 사용하면 보다 편리하다는 사실을 새롭게 알게 되었다.
     ```
   - test > OO_man.txt 파일 3개 생성
 
@@ -51,10 +45,9 @@
 
 
     ```
-    root 계정 활성화 (sudo su - root, passwd)
-    재부팅 (reboot)
-    방화벽 설정 (ufw enable)
-    컴퓨터 종료 (halt -p)
+    1) touch less_man.txt (.txt파일 생성) => man less > less_man.txt (less에 대한 man 페이지를 less_man.txt 파일에 저장)
+    2) touch more_man.txt => man more > more_man.txt (more에 대한 man 페이지를 more_man.txt 파일에 저장)
+    3) touch mount_man.txt => man mount > mount_man.txt (mount에 대한 man 페이지를 mount_man.txt 파일에 저장)
     ```
   - tar 파일로 묶고, gzip 으로 압축
 
@@ -62,14 +55,23 @@
 
 
     ```
-    tar zcvf 20200994.tar.gz test
+    상위 디렉토리로 이동하여 test에 접근하였다.
+    (test 내에 less_man.txt, more_man.txt, mount_man.txt 파일이 존재하기 때문)
+    터미널 창에 명령어는 tar zcvf gzip.tar.gz test 를 이용하였다.
+    
+    파일 압축 방법에는 2가지가 있는데,
+    1) gzip 으로 압축할 경우 : tar zcvf gzip.tar.gz *
+    2) bzip2 로 압축할 경우 : tar jcvf bzip2.tar.bz2 *
+    의 명령어를 사용하면 된다.
     ```
   - TISTORY에 tar.gz 업로드
 
     ![firefox로 업로드](https://user-images.githubusercontent.com/77660379/111018954-7ce1bd00-83ff-11eb-8dbb-19919a4a6f43.JPG)
 
     ```
-    aa
+    vmware 가상 환경 내 firefox 웹 사이트로 tistory에 접근하였다.
+    파일 첨부 과정은 drag-and-drop 으로 가능했고,
+    실제 PC와 가상환경 내의 압축 폴더를 연동시키지 않아도 업로드 가능하다는 점에서 편리했다.
     ```
 
 ## 2. 실습과제 Review
