@@ -21,11 +21,11 @@
   
   - man more
       
-    ![ubuntu_desktop](https://user-images.githubusercontent.com/77660379/109817514-5be9d100-7c75-11eb-8279-ba6a14c3bb69.JPG)
-    
+    ![man more](https://user-images.githubusercontent.com/77660379/111018706-b9141e00-83fd-11eb-9074-36379f4c51c2.JPG)
+  
   - man mount
       
-    ![ubuntu_server](https://user-images.githubusercontent.com/77660379/109817962-d74b8280-7c75-11eb-93bd-aa8096cf5ca8.JPG)
+    ![man mount](https://user-images.githubusercontent.com/77660379/111018710-c7fad080-83fd-11eb-9f2a-88cbacf43d7c.JPG)
 
 * ### **관리자 설정**
   - Server 설정
