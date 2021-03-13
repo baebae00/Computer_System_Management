@@ -13,19 +13,18 @@
 * ### **리눅스 기본 명령어 중 잘 모르는 3개를 선정 후 각각의 man 페이지를 OO_man.txt 파일로 저장한 뒤, 자신의 학번으로 압축**
   
   **CHECK POINT** <br>
-  *vmware 가상환경의 forefox웹사이트를 이용하면 실제 pc 환경과 연동시키지 않아도 파일을 업로드 할 수 있다*
+  *vmware 가상환경의 firefox웹사이트를 이용하면 실제 pc 환경과 연동시키지 않아도 파일을 업로드 할 수 있다*
 
-  - less_man.txt
+  - man less
 
-    ![vmware](https://user-images.githubusercontent.com/77660379/109816988-b7678f00-7c74-11eb-8a46-ae8857d4be55.JPG)
+    ![man less](https://user-images.githubusercontent.com/77660379/111018670-7f431780-83fd-11eb-87c3-12e49cba1e32.JPG)
   
-  - more_man,txt
-      - 서버용으로 사용
-
+  - man more
+      
     ![ubuntu_desktop](https://user-images.githubusercontent.com/77660379/109817514-5be9d100-7c75-11eb-8279-ba6a14c3bb69.JPG)
     
-  - mount_man.txt
-      - 서버용으로 사용
+  - man mount
+      
     ![ubuntu_server](https://user-images.githubusercontent.com/77660379/109817962-d74b8280-7c75-11eb-93bd-aa8096cf5ca8.JPG)
 
 * ### **관리자 설정**
