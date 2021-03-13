@@ -51,8 +51,8 @@
     해상도 변경 (1024x768)
     ```
 
-* ### **부팅 및 로그인 화면** <br>
-    [부팅 및 로그인 화면 영상 URL](https://baedevelog.tistory.com/5)
+* ### **man.txt파일 -> tar.gz압축** <br>
+    [20200994.tar.gz URL](https://baedevelog.tistory.com/6)
 
 ## 2. 실습과제 Review
 * ### **새로 배운 내용**
