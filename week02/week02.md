@@ -30,8 +30,11 @@
       
     ![man mount](https://user-images.githubusercontent.com/77660379/111018710-c7fad080-83fd-11eb-9f2a-88cbacf43d7c.JPG)
 
-* ### **관리자 설정**
-  - Server 설정
+* ### **실습 과정**
+  - test 내 파일 삭제
+
+    ![test 내 파일 삭제](https://user-images.githubusercontent.com/77660379/111018888-296f6f00-83ff-11eb-8363-16113050ea85.JPG)
+
     ```
     터미널 열기
     root 계정 활성화 (sudo su - root, passwd)
@@ -42,16 +45,31 @@
     해상도 변경 (1024x768)
     소프트웨어 자동 업데이트 해제
     ```
-  - Server(b) 설정
+  - test > OO_man.txt 파일 3개 생성
+
+    ![00_man txt 파일 생성](https://user-images.githubusercontent.com/77660379/111018922-59b70d80-83ff-11eb-827f-f2a5b986ad14.JPG)
+
+
     ```
     root 계정 활성화 (sudo su - root, passwd)
     재부팅 (reboot)
     방화벽 설정 (ufw enable)
     컴퓨터 종료 (halt -p)
     ```
-  - Kubuntu 설정
+  - tar 파일로 묶고, gzip 으로 압축
+
+    ![압축](https://user-images.githubusercontent.com/77660379/111018936-6c314700-83ff-11eb-8d8a-4ee9af6180e0.JPG)
+
+
     ```
-    해상도 변경 (1024x768)
+    tar zcvf 20200994.tar.gz test
+    ```
+  - TISTORY에 tar.gz 업로드
+
+    ![firefox로 업로드](https://user-images.githubusercontent.com/77660379/111018954-7ce1bd00-83ff-11eb-8dbb-19919a4a6f43.JPG)
+
+    ```
+    aa
     ```
 
 ## 2. 실습과제 Review
