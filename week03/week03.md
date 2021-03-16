@@ -96,8 +96,19 @@
 * ### **문제가 발생하거나 고민한 내용 + 해결 과정**
 
 - **notice.txt 파일의 중복 생성**
+    ![1](https://user-images.githubusercontent.com/77660379/111340982-703dbd00-86bc-11eb-80a1-591ea49caad3.JPG)
 
-    ![option](https://user-images.githubusercontent.com/77660379/111276383-a3f7f300-867a-11eb-807f-aa18dd25fb11.JPG)
+    ![2](https://user-images.githubusercontent.com/77660379/111341062-821f6000-86bc-11eb-99b2-1850deca9686.JPG)
+
+    ![3](https://user-images.githubusercontent.com/77660379/111341131-93686c80-86bc-11eb-8511-d381cb41140f.JPG)
+
+    ![삭제시도](https://user-images.githubusercontent.com/77660379/111341217-a713d300-86bc-11eb-9eb7-fa94bb250f8c.JPG)
+
+    ![오](https://user-images.githubusercontent.com/77660379/111341301-bd219380-86bc-11eb-9894-8e507ba6fc98.JPG)
+
+    ![다중](https://user-images.githubusercontent.com/77660379/111341392-d1fe2700-86bc-11eb-8f7e-bb2810f9b85f.JPG)
+
+    ![4](https://user-images.githubusercontent.com/77660379/111341522-ef32f580-86bc-11eb-833e-7a565eb5b4b7.JPG)
 
     ```
     문제발생 및 고민한 내용 : notice.txt 파일에 wq 불가
@@ -112,7 +123,7 @@
                -> skel 디렉터리를 비운 상태에서 새로운 notice.txt 파일을 생성해 문제 해결
     ````
 
-- **notice.txt 파일의 중복 생성**
+- **명령어 설치 오류**
 
     ![실행오류](https://user-images.githubusercontent.com/77660379/111339578-37e9af00-86bb-11eb-839a-f83049249185.JPG)
 
