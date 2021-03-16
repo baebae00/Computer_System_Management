@@ -95,7 +95,7 @@
 
 * ### **문제가 발생하거나 고민한 내용 + 해결 과정**
 
-- 1. notice.txt 파일의 중복 생성
+- **notice.txt 파일의 중복 생성**
 
     ![option](https://user-images.githubusercontent.com/77660379/111276383-a3f7f300-867a-11eb-807f-aa18dd25fb11.JPG)
 
@@ -112,7 +112,7 @@
                -> skel 디렉터리를 비운 상태에서 새로운 notice.txt 파일을 생성해 문제 해결
     ````
 
-- 2. 실행 명령어 설치
+- **notice.txt 파일의 중복 생성**
 
     ![실행오류](https://user-images.githubusercontent.com/77660379/111339578-37e9af00-86bb-11eb-839a-f83049249185.JPG)
 
