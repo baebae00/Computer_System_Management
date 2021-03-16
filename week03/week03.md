@@ -94,28 +94,38 @@
 ```
 
 * ### **문제가 발생하거나 고민한 내용 + 해결 과정**
-```
-1. 문제발생 및 고민한 내용
-  압축 폴더 업로드
-    => Why? tar.gz 폴더는 vmware 가상환경 상에 생성한 폴더이기 때문에 이를 실제 PC와 연동해 업로드하는 방법이 무엇일지 고민함
 
-2. 해결 과정
-  실제 PC의 폴더 내에 압축한 tar.gz 폴더가 존재하는 지 찾아봄
-  (1) 가상환경에서 생성한 폴더이기 때문에 실제 PC에 존재할 리 없음
-  (2) 구글링을 통해 호스트와 가상머신간 같은 폴더를 공유하는 방법을 알아냄
-    (a) 공유할 가상 머신의 세팅 > 옵션 
-    (b) hared Folders 항목 추가
-    (c) Always enabled로 바꾸고 Map as a network drive in Windows guests 항목 체크
-    (d) 공유 폴더 지정을 위해 추가 버튼 클릭
-    (e) 공유할 호스트의 폴더 지정
-    (f) Name은 20200994로 지정
-    (g) 공유 권한을 물으면 Enabled this share 항목 체크
-  (3) 이렇게 하면 가상머신에서 공유 파일 지정은 끝이 남
-  (4) 그러나 너무 복잡해서 다른 방법은 없을까 고민
-  (5) Slack #qna 창의 질문-답변을 참고하여 가상환경에서 바로 파일을 업로드하는 방법이 있다는 사실을 알게됨
-  (6) vmware 내 firefox 웹사이트로 파일을 업로드할 주소인 tistory에 접근
-  (7) 정보의 공유에 대한 중요성을 깨달음 qna 덕분에 보다 쉽게 파일 업로드 가능해짐
-```
+- 1. notice.txt 파일의 중복 생성
+
+    ![option](https://user-images.githubusercontent.com/77660379/111276383-a3f7f300-867a-11eb-807f-aa18dd25fb11.JPG)
+
+    ```
+    문제발생 및 고민한 내용 : notice.txt 파일에 wq 불가
+
+    해결 과정 : 'E:35: No previous regular expression' 오류 발생
+               -> 'E:35' 오류에 대한 의미 구글링했으나 정확한 문제가 무엇인지 알 수 없었음
+               -> txt 파일에 내용을 적을 수 있을 때까지 notice.txt 파일을 계속해서 생성했으나 여전히 해결되지 않음
+               -> 터미널 창을 닫고 다시 터미널 창을 열어 skel 디렉터리를 비우려고 시도했으나 불가능
+               -> notice.txt 파일에 접근하니 또다시 오류 발생
+               -> 오류창을 자세히 읽어보니 'vim -r notice.txt' 명령어를 통해 skel 디렉터리를 비울 수 있다는 사실을 알게 됨
+               -> 중복 생성된 notice.txt.* 파일들을 'vim -r notice.txt' 명령어로 삭제
+               -> skel 디렉터리를 비운 상태에서 새로운 notice.txt 파일을 생성해 문제 해결
+    ````
+
+- 2. 실행 명령어 설치
+
+    ![실행오류](https://user-images.githubusercontent.com/77660379/111339578-37e9af00-86bb-11eb-839a-f83049249185.JPG)
+
+    ![실행오류해결](https://user-images.githubusercontent.com/77660379/111339728-55b71400-86bb-11eb-880c-2bb60ad9d5c3.JPG)
+
+    ![실행2](https://user-images.githubusercontent.com/77660379/111276733-ffc27c00-867a-11eb-9229-bfa957f0af25.JPG)
+
+    ```
+    문제발생 및 고민한 내용 : figlet 명령어를 이용해 'I love CSM' 를 출력하려 시도했으나 오류 발생
+
+    해결 과정 : figlet 명령어는 기본적으로 패키지 안에 포함되어 있는 것이 아니기 때문에 따로 설치가 필요
+               -> # apt install figlet 을 콘솔창에 입력하여 figlet을 사용할 수 있는 환경을 구축함
+    ```
 
 * ### **참고할 만한 내용**
 ```
