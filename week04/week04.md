@@ -18,7 +18,7 @@
 
 * ### **Chrome 설치** <br>
   
-  * Chrome소개
+  * Chrome 소개
 
     ```
     우분투에 기본적으로 firefox라는 웹 브라우저가 탑재되어있지만 보다 익숙한 Chrome을 사용하기 위해 설치
@@ -54,31 +54,43 @@
 
 
 * ### **Visual Studio Code 설치** <br>
-  - lolcat -h
 
-    ![option](https://user-images.githubusercontent.com/77660379/111276383-a3f7f300-867a-11eb-807f-aa18dd25fb11.JPG)
-
-    ```
-    lolcat 사용을 시작하기 전에 사용 가능한 옵션을 알고 다음 명령을 사용하여 도움을 받아야 함
-    ```
-  - 실행 결과 no.1
-
-    ![실행1](https://user-images.githubusercontent.com/77660379/111276537-c984fc80-867a-11eb-8224-d785f36730d4.JPG)
+  * Visual Studio Code 소개
 
     ```
-    1) # ps | lolcat
-    2) # cal | lolcat
+    우분투에 기본적으로 firefox라는 웹 브라우저가 탑재되어있지만 보다 익숙한 Chrome을 사용하기 위해 설치
     ```
 
-  - 실행 결과 no.2
-
-    ![실행2](https://user-images.githubusercontent.com/77660379/111276733-ffc27c00-867a-11eb-9229-bfa957f0af25.JPG)
+  * Visual Studio Code가 유용하다고 생각한 이유
 
     ```
-    figlet 명령어 사용
-    # figlet <문자> | lolcat
-    figlet : (일반 화면 캐릭터로 구성된) 큰 글자를 표시하는 유틸리티
+    aaa
     ```
+
+  - Visual Studio Code 사이트에 접속해 Visual Studio Code 다운로드
+
+    ![vscode1](https://user-images.githubusercontent.com/77660379/112142194-9b269480-8c19-11eb-876a-663518d2220b.JPG)
+
+
+  - 그 중 리눅스 > 우분투에 설치할 것이므로 deb 파일 64bit를 다운로드
+
+    ![vscode2](https://user-images.githubusercontent.com/77660379/112142281-b6919f80-8c19-11eb-9627-1c897fe5d239.JPG)
+
+  - Keep 클릭
+
+    ![vscode3](https://user-images.githubusercontent.com/77660379/112142311-c315f800-8c19-11eb-8240-34d2a46cf6a2.JPG)
+
+  - 터미널 창에서 ~/Downloads 디렉터리에 code_1.38.0*.deb파일이 다운로드 되어있는 지 확인
+
+    ![vscode4](https://user-images.githubusercontent.com/77660379/112142346-cf01ba00-8c19-11eb-9859-a8a66636a715.JPG)
+
+  - code_1.38.0*.deb파일이 있는 디렉터리로 이동하여 설치
+
+    ![vscode5](https://user-images.githubusercontent.com/77660379/112142389-de810300-8c19-11eb-8eb0-12d5299d2dd2.JPG)
+
+  - Visual Studio Code 설치 완료
+
+    ![vscode6](https://user-images.githubusercontent.com/77660379/112142485-01131c00-8c1a-11eb-956b-d8f8f5bba94e.JPG)
 
  ### **Kakaotalk 설치** <br>
   - lolcat -h
