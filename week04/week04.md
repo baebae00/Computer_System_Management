@@ -175,46 +175,56 @@
     ![kakaosolve](https://user-images.githubusercontent.com/77660379/112165792-66730700-8c32-11eb-8e7d-a89fcbaa46be.jpg)
 
 ## 2. 실습과제 Review
+
 * ### **새로 배운 내용**
 ```
-1. 사용자 정보 확인 /etc/passwd
-    => '사용자이름:비밀번호:사용자ID:그룹ID:추가정보:홈디렉터리:로그시제공되는셸'
-       추가정보는 선택적 입력 (이름:방번호:직장전화번호:집전화번호:기타)프로세스 관리
+1. Files 파일
+    => GNOME 데스크톱의 기본 파일 관리자(GNOME 의 이전 파일 관리자는 미드나잇 커맨더)
+       내부적으로는 노틸러스 nautilus 라고 부르기도 함
+       2001년 처음 공개, 현재 GNU LGPL 로 관리
+       3.18 버전 부터 구글드라이브 연동 가능 (Dropbox, Own Cloud 도 가능)
+       Uvuntu 20.04 LTS 에서는 3.36.3-stable 버전이 기본으로 설치되어 있음
 
-2. 그룹 정보 확인 /etc/group
-    => '그룹이름:비밀번호:그룹ID:보조그룹사용자'
-        보조그룹사용자 : 이 그룹을 주 그룹이 아닌 보조 그룹으로 사용하는 사용자의 목록
-        여러 명이면 쉼표로 구분
+2. 데스크톱 환경 - GNOME
+    => 그놈 GNOME, GNU Network Object Model Environment
+       데스크톱 프로그램 집합의 일종이자 이를 개발하는 프로젝트 이름
 
-3. 파일과 디렉터리는 소유권(ownership)과 허가권(permission)이 있음
-     => 소유권 : 누가 해당 파일 또는 디렉터리를 생성 및 관리할 수 있는가?
-        허가권 : 해당 파일 또는 디렉터리를 읽거나 쓰거나 실행할 수 있는가?
-
-4. 파일 소유권
-     => 파일 소유권을 변경하는 명령어
-            -> chown ubuntu mydata.txt          // mydata.txt 파일의 소유자를 ubuntu 사용자로 변경
-               chown ubuntu.ubuntu mydata.txt   // 파일 그룹도 ubuntu 그룹으로 변경
-               chgrp ubuntu mydata.txt          // 그룹만 ubuntu 그룹으로 변경
-
-5. 파일 허가권
-     => 파일 허가권을 변경하는 명령어
-        소유자, 그룹, 그 외 사용자 별로 구분하여 관리
-        root 사용자 또는 해당 파일의 소유자만 실행 가능
-        read, write, execute
-            -> chmod 777 mydata.txt             // 모든 사용자가 mydata.txt 파일을 읽고, 쓰고, 실행할 수 있음
-               chmod u+x mydata.txt             // 소유자에게 실행 권한을 허가(+)
-        tar
-            -> Tape ARchive
-               tar 로 묶여지기 전 파일들의 속성, 심볼릭 링크, 디렉토리 구조 등을 그대로 가져갈 수 있음
-
-6. 링크 파일
-     => 하드 링크 hard link
-         -> ln <원본파일><링크파일명>
-         심볼릭 링크 symbolic link 또는 소프트 링크 soft link
-         -> ln -s <원본파일><링크파일명>
+3. X 윈도우
+     => 유닉스 계열 운영체제에서 사용되는 윈도우 시스템
+        디스플레이 장치에 창(윈도우)을 표시하며, 마우스와 키보드 등 입력장치의 상호작용을 관리해 GUI 환경 구현을 위한 기본적인 프레임워크 제공
+        1984년, MIT에서 개발
+        1987년, X윈도우 시스템 프로토콜의 가장 최신 버전 개발, X11
+        현재는 X.Org 재단에서, 오픈소스라이선스로 배포 및 관리
+        네트워크 프로토콜 기반의 클라이언트-서버 모델
+        UI(User-Interface) 의 모습에 관여하지 않음
+        다양한 모습의 데스크톱 환경(KDE, GNOME, Xface 등)이 X윈도우를 기반으로 사용함
 ```
 
 * ### **문제가 발생하거나 고민한 내용 + 해결 과정**
+
+- **Tasksel 패키지 설치 오류**
+
+    ![오류0](https://user-images.githubusercontent.com/77660379/112175251-75f64e00-8c3a-11eb-921a-8b41d20fe8aa.JPG)
+
+    ![오류1](https://user-images.githubusercontent.com/77660379/112175323-83133d00-8c3a-11eb-97b8-9a6257c2f1f7.JPG)
+
+    ![오류2](https://user-images.githubusercontent.com/77660379/112175391-8dcdd200-8c3a-11eb-8483-b238510bc528.JPG)
+
+    ![해결](https://user-images.githubusercontent.com/77660379/112175445-97efd080-8c3a-11eb-8c56-27cd640501b6.JPG)
+
+    ![해결완료](https://user-images.githubusercontent.com/77660379/112175528-a76f1980-8c3a-11eb-8827-1eb0b31ca0d9.JPG)
+
+    ```
+    문제발생 및 고민한 내용 : 현재 카카오에서 XP버전을 배포하지 않아 카카오톡 XP버전 다운 불가
+
+    해결 과정 : cobextract, winetricks, winetricks 모듈 설치 후 kakaotalk XP버전을 다운 받을 수 있는 링크로 접속
+               -> wine[카카오톡설치파일] 명령어를 터미널 창에 입력했으나 'not found' 오류 
+               -> 터미널 창을 닫고 다시 터미널 창을 열어 skel 디렉터리를 비우려고 시도했으나 불가능
+               -> Server(b)에 설치해 둔 Chrome을 이용해 카카오페이지에 접속함
+               -> kakaotalk 신규 버전 다운로드
+               -> wine, playlinux를 이용한 설치로 다운로드 방법 변경
+               -> PlayOnLinux를 실행해 Wine을 설치하므로써 문제 해결
+    ````
 
 - **KakaoTalk XP버전 다운 불가**
 
@@ -229,66 +239,29 @@
     ![kakao13](https://user-images.githubusercontent.com/77660379/112168242-75f34f80-8c34-11eb-9216-345cc4045474.JPG)
 
     ![오류1](https://user-images.githubusercontent.com/77660379/112168342-8f949700-8c34-11eb-9d11-09ff9c621049.JPG)
-    
+
     ```
     문제발생 및 고민한 내용 : 현재 카카오에서 XP버전을 배포하지 않아 카카오톡 XP버전 다운 불가
 
-    해결 과정 : 'E:35: No previous regular expression' 오류 발생
-               -> 'E:35' 오류에 대한 의미 구글링했으나 정확한 문제가 무엇인지 알 수 없었음
-               -> txt 파일에 내용을 적을 수 있을 때까지 notice.txt 파일을 계속해서 생성했으나 여전히 해결되지 않음
+    해결 과정 : cobextract, winetricks, winetricks 모듈 설치 후 kakaotalk XP버전을 다운 받을 수 있는 링크로 접속
+               -> wine[카카오톡설치파일] 명령어를 터미널 창에 입력했으나 'not found' 오류 
                -> 터미널 창을 닫고 다시 터미널 창을 열어 skel 디렉터리를 비우려고 시도했으나 불가능
-               -> notice.txt 파일에 접근하니 또다시 오류 발생
-               -> 오류창을 자세히 읽어보니 'vim -r notice.txt' 명령어를 통해 skel 디렉터리를 비울 수 있다는 사실을 알게 됨
-               -> 중복 생성된 notice.txt.* 파일들을 'vim -r notice.txt' 명령어로 삭제
-               -> skel 디렉터리를 비운 상태에서 새로운 notice.txt 파일을 생성해 문제 해결
+               -> Server(b)에 설치해 둔 Chrome을 이용해 카카오페이지에 접속함
+               -> kakaotalk 신규 버전 다운로드
+               -> wine, playlinux를 이용한 설치로 다운로드 방법 변경
+               -> PlayOnLinux를 실행해 Wine을 설치하므로써 문제 해결
     ````
-
-- **명령어 설치 오류**
-
-    ![실행오류](https://user-images.githubusercontent.com/77660379/111339578-37e9af00-86bb-11eb-839a-f83049249185.JPG)
-
-    ![실행오류해결](https://user-images.githubusercontent.com/77660379/111339728-55b71400-86bb-11eb-880c-2bb60ad9d5c3.JPG)
-
-    ![실행2](https://user-images.githubusercontent.com/77660379/111276733-ffc27c00-867a-11eb-9229-bfa957f0af25.JPG)
-
-    ```
-    문제발생 및 고민한 내용 : figlet 명령어를 이용해 'I love CSM' 를 출력하려 시도했으나 오류 발생
-
-    해결 과정 : figlet 명령어는 기본적으로 패키지 안에 포함되어 있는 것이 아니기 때문에 따로 설치가 필요
-               -> # apt install figlet 을 콘솔창에 입력하여 figlet을 사용할 수 있는 환경을 구축함
-    ```
 
 * ### **참고할 만한 내용**
 ```
-리눅스 패키지 설정 명령어 rpm, wget, yum
-  rpm : 리눅스 Redhat 계열에서 사용되는 명령어
-        확장자가 .rpm 이어야하며 이를 패키지라고 부름
-        윈도우의 setup.exe와 같은 유형
-        미리 컴파일된 프로그램을 배포
-          => i : 패키지 설치
-             v : 설치과정 확인
-             h : 설치진행과정을 #마크로 화면에 출력
-             U : 패키지 업그레이드
-             e : 패키지 삭제
-             qa : 설치된 모든 패키지 확인
-             qi : 설치된 패키지 정보 확인
-             qpl : 패키지 파일에 어떤 파일이 포함되었는지 확인
-             v : 패키지 검사
-             a : 모든 패키지
+gftp란?
+    gftp는 무료/오픈 소스 멀티 스레드 파일 전송 프로토콜 클라이언트 프로그램
+    FTP, FTPS, HTTP, HTTPS, SFTP 및 FSP 프로토콜뿐만 아니라 FTP 및 HTTP 프록시 서버 지원 및 FXP 파일 전송(FTP를 통해 두 원격 서버 간에 파일 전송)에 대한 지원이 있음
+    GTK+를 사용해 만든 X 윈도우용 FTP클라이언트 프로그램
+    GUI 형태로 되어 있어 windows를 주로 사용하는 이용자들에게 편리
 
-  wget : 파일을 다운받는 명령어
-         파일 주소를 알면 하드디스크에 저장 가능
-
-  yum : 패키지 관리 프로그램
-        rpm 명령어의 개선용 명령어
-        파일이 있는 주소를 파일형태로 저장해 뒀다가 키워드만 입력하면 파일에서 찾아서 다운을 받는 형태
-          => install : 설치
-             check-update : 업데이트 가능한 목록 확인
-             update : 패키지 업데이트
-             remove : 패키지 삭제
-             search : 인터넷에서 패키지 설치가 가능한지 확인
-             info : 패키지 정보 학인
-             list : 패키지 목록 확인
+gtfp의 특징
+    파일전송중 인터럽트된 파일의 이어받기 가능, 동시 다운로드 가능, FTP,HTTP,SSH 프로토콜 지원, 파일 전송 큐, 디렉터리 전체받기 가능, FTP 와 HTTP 프록시 지원, 원격 디렉터리 캐시, 드래그앤드롭 지원, 매우 뛰어난 접속 매니저 등 의 다양한 기능이 있음
 ```
 
 * ### **회고 (+,-,!)**
