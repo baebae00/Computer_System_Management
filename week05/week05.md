@@ -22,7 +22,7 @@
     비록 빠른 속도는 기대할 수 없지만 하드디스크가 고장나더라도 없어져서는 안될 중요한 데이터는 안전하게 복구할 수 있다는 점에서 가장 맘에 듦
     ```
 
-  - 하드디스크 파티션
+  - 하드디스크 파티션 (b, c 생성 후 이를 이용해 RAID 생성)
 
     ![하드디스크파티션](https://user-images.githubusercontent.com/77660379/113011800-1c9b9b00-91b5-11eb-85f6-647e4295f6b1.JPG)
 
@@ -77,15 +77,9 @@
 
 - **tldr 오류**
 
-    ![오류0](https://user-images.githubusercontent.com/77660379/112175251-75f64e00-8c3a-11eb-921a-8b41d20fe8aa.JPG)
+    ![tldr 오류](https://user-images.githubusercontent.com/77660379/113012440-bcf1bf80-91b5-11eb-8876-6df630700ae9.JPG)
 
-    ![오류1](https://user-images.githubusercontent.com/77660379/112175323-83133d00-8c3a-11eb-97b8-9a6257c2f1f7.JPG)
-
-    ![오류2](https://user-images.githubusercontent.com/77660379/112175391-8dcdd200-8c3a-11eb-8483-b238510bc528.JPG)
-
-    ![해결](https://user-images.githubusercontent.com/77660379/112175445-97efd080-8c3a-11eb-8c56-27cd640501b6.JPG)
-
-    ![해결완료](https://user-images.githubusercontent.com/77660379/112175528-a76f1980-8c3a-11eb-8827-1eb0b31ca0d9.JPG)
+    ![tldr 해결](https://user-images.githubusercontent.com/77660379/113012486-c7ac5480-91b5-11eb-95ff-8849cf12fe08.JPG)
 
     ```
     문제발생 및 고민한 내용 : 현재 카카오에서 XP버전을 배포하지 않아 카카오톡 XP버전 다운 불가
