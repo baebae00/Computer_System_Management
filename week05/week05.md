@@ -12,200 +12,70 @@
 
 * ### **Server(b)에 RAID 구축**
   
-  **CHECK POINT** <br>
-  *우분투에 Chrome을 설치하면 다른 프로그램들을 다운로드하기 보다 유용해진다*
-
-* ### **Chrome 설치** <br>
+* ### **RAID 1 설치** <br>
   
-  * Chrome 소개
+  * RAID 1 을 선택한 (가장 적절하다고 생각한) 이유
 
     ```
-    Google Chrome은 구글이 개발중인 프리웨어 웹 브라우저
-    크롬이란 뜻은 본래 그래픽 사용자 인터페이스 에서 창틀을 가리키는데, 여기서는 브라우저 틀 영역을 가리키며, 이 영역을 최소화시키자는 목표로 크롬이라고 이름을 지었다고 함
-    스탯 카운터 통계 기준으로 2012년 5월부터 인터넷 익스플로러를 제치고 현재 전 세계에서 가장 많이 쓰이는 웹 브라우저
+    가용성 높음 + 복원이 비교적 매우 간단 => RAID 1
+
+    비록 빠른 속도는 기대할 수 없지만 하드디스크가 고장나더라도 없어져서는 안될 중요한 데이터는 안전하게 복구할 수 있다는 점에서 가장 맘에 듦
     ```
 
-  * Chrome이 유용하다고 생각한 이유
+  - 하드디스크 파티션
 
-    ```
-    우분투에 기본적으로 firefox 라는 웹 브라우저가 탑재되어 있지만 보다 익숙해 편리한 Chrome이 설치된다면 유용할 것이라 생각
-    ```
+    ![하드디스크파티션](https://user-images.githubusercontent.com/77660379/113011800-1c9b9b00-91b5-11eb-85f6-647e4295f6b1.JPG)
 
-  - 터미널 창에 크롬 브라우저 패키지 설치용 인증키를 받기 위한 명령어 입력, 크롬 웹 브라우저 패키지를 다운로드 받을 PPA를 sources.list.d 에 추가
+  - RAID 1 구성
 
-    ![chrome1](https://user-images.githubusercontent.com/77660379/112141098-3b7bb980-8c18-11eb-8b55-81a70df88ce9.JPG)
-
-  - 패키지 리스트 업데이트
-
-    ![chrome2](https://user-images.githubusercontent.com/77660379/112141161-4d5d5c80-8c18-11eb-9cc2-f4f0f55bf851.JPG)
+    ![raid1](https://user-images.githubusercontent.com/77660379/113011849-291ff380-91b5-11eb-8c0d-16bfcadcfdaf.JPG)
     
-  - 크롬 설치
+  - 정보 확인
 
-    ![chrome3](https://user-images.githubusercontent.com/77660379/112141200-5b12e200-8c18-11eb-8784-19209fdf17c5.JPG)
-  
-  - 크롬 설치를 위해 생성했던 파일 제거
+    ![raid1_2](https://user-images.githubusercontent.com/77660379/113011900-363ce280-91b5-11eb-927e-05eb69293cb9.JPG)
 
-    ![chrome4](https://user-images.githubusercontent.com/77660379/112141312-7aaa0a80-8c18-11eb-9550-584efb76e85f.JPG)
-
-  - 크롬 설치 완료
-
-    ![chrome설치완료](https://user-images.githubusercontent.com/77660379/112141393-93b2bb80-8c18-11eb-8833-d9105c14b633.JPG)
-
-    ![완료](https://user-images.githubusercontent.com/77660379/112141487-ae853000-8c18-11eb-92d3-87587b88938d.JPG)
-
-
-* ### **Visual Studio Code 설치** <br>
-
-  * Visual Studio Code 소개
-
-    ```
-    Visual Studio Code는 마이크로소프트가 마이크로소프트 우니도우, macOS, 리눅스용으로 개발한 소스 코드 편집기
-    디버깅 지원과 Git 제어, 구문 강조 기능등이 포함되어 있으며, 사용자가 편집기의 테마와 단축기, 설정 등을 수정 가능
-    ```
-
-  * Visual Studio Code가 유용하다고 생각한 이유
-
-    ```
-    윈도우에서 git에 코드를 연동할 때 visual studio code를 사용하는데, 리눅스에도 vscode가 탑재된다면 vim 보다 훨씬 편리해 유용할 것이라 생각
-    ```
-
-  - Visual Studio Code 사이트에 접속해 Visual Studio Code 다운로드
-
-    ![vscode1](https://user-images.githubusercontent.com/77660379/112142194-9b269480-8c19-11eb-876a-663518d2220b.JPG)
-
-
-  - 그 중 리눅스 > 우분투에 설치할 것이므로 deb 파일 64bit를 다운로드
-
-    ![vscode2](https://user-images.githubusercontent.com/77660379/112142281-b6919f80-8c19-11eb-9627-1c897fe5d239.JPG)
-
-  - Keep 클릭
-
-    ![vscode3](https://user-images.githubusercontent.com/77660379/112142311-c315f800-8c19-11eb-8240-34d2a46cf6a2.JPG)
-
-  - 터미널 창에서 ~/Downloads 디렉터리에 code_1.38.0*.deb파일이 다운로드 되어있는 지 확인
-
-    ![vscode4](https://user-images.githubusercontent.com/77660379/112142346-cf01ba00-8c19-11eb-9859-a8a66636a715.JPG)
-
-  - code_1.38.0*.deb파일이 있는 디렉터리로 이동하여 설치
-
-    ![vscode5](https://user-images.githubusercontent.com/77660379/112142389-de810300-8c19-11eb-8eb0-12d5299d2dd2.JPG)
-
-  - Visual Studio Code 설치 완료
-
-    ![vscode6](https://user-images.githubusercontent.com/77660379/112142485-01131c00-8c1a-11eb-956b-d8f8f5bba94e.JPG)
-
- ### **Kakaotalk 설치** <br>
-  
-  * Kakaotalk 소개
-
-    ```
-    KakaoTalk은 전세계 어디서나 안드로이드폰과 아이폰 사용자간 무료로 메시지를 주고 받을 수 있는 메신저 서비스
-    ```
-
-  * Kakaotalk이 유용하다고 생각한 이유
-
-    ```
-    대부분의 이용자가 윈도우에 PC 카카오톡을 필수로 설치해 사용
-    때문에 우분투에서도 윈도우 환경에서와 마찬가지로 PC 카카오톡이 설치된다면 유용할 것이라 생각
-    ```
-
-  - wine, playonlinux 설치
-
-    ![오류해결1](https://user-images.githubusercontent.com/77660379/112161716-bf40a080-8c2e-11eb-9725-16764df3f56a.JPG)
-
-  - PlayOnLinux 실행 > Wine 버전 관리 확인 > 안정화 버전인 wine 5.0.2 확인
-
-    ![오류해결2](https://user-images.githubusercontent.com/77660379/112161769-cb2c6280-8c2e-11eb-9684-149a5bb69392.JPG)
-
-    ![오류해결3](https://user-images.githubusercontent.com/77660379/112162308-48f06e00-8c2f-11eb-9813-ad6245237e9b.JPG)
-
-    ![오류해결4](https://user-images.githubusercontent.com/77660379/112162373-57d72080-8c2f-11eb-8a46-7ddd1f473656.JPG)
-
-  - wine 5.0.2 설치 > 'Install a non-listed program' 클릭 > '다음' 클릭
-
-    ![오류해결5](https://user-images.githubusercontent.com/77660379/112162627-9076fa00-8c2f-11eb-9253-7dcc5bfd7eff.JPG)
-
-    ![오류해결6](https://user-images.githubusercontent.com/77660379/112162688-a08ed980-8c2f-11eb-8f54-a2222da70eaa.JPG)
-
-  - 'Install a program in a new virtual drive' 클릭 > 'kakao' 이름 정해줌 > 세 개 모두 선택
-
-    ![오류해결7](https://user-images.githubusercontent.com/77660379/112163014-f2cffa80-8c2f-11eb-9bbc-a9ed0a47df56.JPG)
-
-    ![오류해결8](https://user-images.githubusercontent.com/77660379/112163057-024f4380-8c30-11eb-938c-b84fce46a38e.JPG)
-
-    ![오류해결9](https://user-images.githubusercontent.com/77660379/112163182-201ca880-8c30-11eb-8290-935dc4488d35.JPG)
-
-  - 설치 확인했던 wine 5.0.2 선택 > 32비트 선택
-
-    ![오류해결10](https://user-images.githubusercontent.com/77660379/112163352-49d5cf80-8c30-11eb-94c4-a2ae11a5526b.JPG)
-
-    ![오류해결11](https://user-images.githubusercontent.com/77660379/112163409-5823eb80-8c30-11eb-8274-74078ae12050.JPG)
-
-  - mono 설치 > window 10 선택 > gdiplus, gecko, mono28 선택
-
-    ![오류해결12](https://user-images.githubusercontent.com/77660379/112163606-899cb700-8c30-11eb-8a95-71260fd3dc41.JPG)
-
-    ![오류해결13](https://user-images.githubusercontent.com/77660379/112163667-97523c80-8c30-11eb-971f-90c3d60ac1b0.JPG)
-
-    ![오류해결14](https://user-images.githubusercontent.com/77660379/112163720-a20cd180-8c30-11eb-92b3-6ca26861bb69.JPG)
-
-  - Chrome을 통해 카카오페이지로 이동 후 카카오톡 설치 
-
-    ![오류해결15](https://user-images.githubusercontent.com/77660379/112164066-ef893e80-8c30-11eb-8cf3-991296b3fc51.JPG)
-
-  - PlayOnLinux 찾아보기에서 다운로드한 카카오 설치 파일 선택
-
-    ![오류해결16](https://user-images.githubusercontent.com/77660379/112164289-1b0c2900-8c31-11eb-9f51-08c451829f57.JPG)
-
-  - 카카오 설치 화면 > 윈도우에서 설치하던 방법과 동일하게 설치 (단, 마지막에 '카카오톡 실행'만 체크 해제)
-
-    ![오류해결18](https://user-images.githubusercontent.com/77660379/112164603-5dce0100-8c31-11eb-9978-0a36219872b6.JPG)
-
-    ![오류해결19](https://user-images.githubusercontent.com/77660379/112164677-6cb4b380-8c31-11eb-9d2b-8010c54e3d39.JPG)
-
-  - 카카오톡을 선택해서 바로가기 생성 > 표시될 이름 'KakaoTalk'으로 설정
-
-    ![오류해결20](https://user-images.githubusercontent.com/77660379/112164903-9f5eac00-8c31-11eb-9d2e-c2482b5db901.JPG)
-
-    ![오류해결21](https://user-images.githubusercontent.com/77660379/112164965-ad143180-8c31-11eb-9f2c-e99178bce651.JPG)
-
-    ![오류해결22](https://user-images.githubusercontent.com/77660379/112165113-cb7a2d00-8c31-11eb-97b0-673f09c88cda.JPG)
-
-  - 카카오톡 실행
-
-    ![오류해결23](https://user-images.githubusercontent.com/77660379/112165172-d9c84900-8c31-11eb-8a46-b4d16d8a293a.JPG)
-
-    ![kakaosolve](https://user-images.githubusercontent.com/77660379/112165792-66730700-8c32-11eb-8e7d-a89fcbaa46be.jpg)
 
 ## 2. 실습과제 Review
 
 * ### **새로 배운 내용**
 ```
-1. Files 파일
-    => GNOME 데스크톱의 기본 파일 관리자(GNOME 의 이전 파일 관리자는 미드나잇 커맨더)
-       내부적으로는 노틸러스 nautilus 라고 부르기도 함
-       2001년 처음 공개, 현재 GNU LGPL 로 관리
-       3.18 버전 부터 구글드라이브 연동 가능 (Dropbox, Own Cloud 도 가능)
-       Uvuntu 20.04 LTS 에서는 3.36.3-stable 버전이 기본으로 설치되어 있음
+1. 리눅스의 파일 시스템
+    => 디렉터리 Directory
+        -> 파일(또는 다른 디렉터리)을 보관하는 특수한 파일
+           다른 디렉터리에 존재하는 파일 이름은 동일해도 됨 (접근 가능)
+       트리 구조
+       
+       파일 시스템의 종류
+         -> ext4, XFS, Btrfs, ...
+            저장장치의 데이터 구조, 처리하는 프로그램이 다름
+            동일한 시스템 콜을 호출하여 통일된 인터페이스로 접근 가능
 
-2. 데스크톱 환경 - GNOME
-    => 그놈 GNOME, GNU Network Object Model Environment
-       데스크톱 프로그램 집합의 일종이자 이를 개발하는 프로젝트 이름
+       데이터와 메타데이터
+         -> 데이터 : 특정 목적에 따라 생성된 실제 데이터
+            메타 데이터 : 데이터의 정보(이름, 위치, 크기, 종류, 생성시간, 권한 등)를 담은 데이터
 
-3. X 윈도우
-     => 유닉스 계열 운영체제에서 사용되는 윈도우 시스템
-        디스플레이 장치에 창(윈도우)을 표시하며, 마우스와 키보드 등 입력장치의 상호작용을 관리해 GUI 환경 구현을 위한 기본적인 프레임워크 제공
-        1984년, MIT에서 개발
-        1987년, X윈도우 시스템 프로토콜의 가장 최신 버전 개발, X11
-        현재는 X.Org 재단에서, 오픈소스라이선스로 배포 및 관리
-        네트워크 프로토콜 기반의 클라이언트-서버 모델
-        UI(User-Interface) 의 모습에 관여하지 않음
-        다양한 모습의 데스크톱 환경(KDE, GNOME, Xface 등)이 X윈도우를 기반으로 사용함
+2. 하드디스크 추가
+    => SATA(Serial ATA, 직렬 ATA)
+        -> 하드디스크 또는 광학 드라이브와 데이터 전송을 주요 목적으로 만든 컴퓨터 버스
+       
+       SCSI(Samll Computer System Interface)
+         -> 컴퓨터에 주변기기를 연결할 때 직렬 방식으로 연결하기 위한 표준
+
+       파티션(Partician)
+         -> Primary 파티션 / Extended 파티션 / Logical 파티션
+            1개의 하드디스크는 4개의 Primary 파티션까지 설정 가능 (5개의 파티션을 설정하려면, 3개의 Primary 파티션과 1개의 Extended 파티션을 설정한 뒤, Extended 파티션을 2개 이상의 Logical 파티션으로 설정)
+
+3. 여러 개의 하드디스크를 하나처럼 사용
+     => RAID(Redundant Array of Inexpensive/Independent Disks)
+          -> 여러 개의 하드디스크를 하나의 하드디스크 처럼 사용하는 방식
+             비용, 신뢰성, 성능 조절의 효과
+             하드웨어 RAID : 하드웨어 제조업체에서 여러 개의 하드디스크를 연결한 장비를 만들어서 공급
+             소프트웨어 RAID : 운영체제에서 지원하는 방식
 ```
 
 * ### **문제가 발생하거나 고민한 내용 + 해결 과정**
 
-- **Tasksel 패키지 설치 오류**
+- **tldr 오류**
 
     ![오류0](https://user-images.githubusercontent.com/77660379/112175251-75f64e00-8c3a-11eb-921a-8b41d20fe8aa.JPG)
 
@@ -229,7 +99,7 @@
                -> PlayOnLinux를 실행해 Wine을 설치하므로써 문제 해결
     ````
 
-- **KakaoTalk XP버전 다운 불가**
+- **mdadm 오류**
 
     ![kakao9](https://user-images.githubusercontent.com/77660379/112167980-42b0c080-8c34-11eb-9ac6-532d44a9db0d.JPG)
 
