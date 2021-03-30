@@ -75,73 +75,66 @@
 
 * ### **문제가 발생하거나 고민한 내용 + 해결 과정**
 
-- **tldr 오류**
-
-    ![tldr 오류](https://user-images.githubusercontent.com/77660379/113012440-bcf1bf80-91b5-11eb-8876-6df630700ae9.JPG)
-
-    ![tldr 해결](https://user-images.githubusercontent.com/77660379/113012486-c7ac5480-91b5-11eb-95ff-8849cf12fe08.JPG)
-
-    ```
-    문제발생 및 고민한 내용 : 현재 카카오에서 XP버전을 배포하지 않아 카카오톡 XP버전 다운 불가
-
-    해결 과정 : cobextract, winetricks, winetricks 모듈 설치 후 kakaotalk XP버전을 다운 받을 수 있는 링크로 접속
-               -> wine[카카오톡설치파일] 명령어를 터미널 창에 입력했으나 'not found' 오류 
-               -> 터미널 창을 닫고 다시 터미널 창을 열어 skel 디렉터리를 비우려고 시도했으나 불가능
-               -> Server(b)에 설치해 둔 Chrome을 이용해 카카오페이지에 접속함
-               -> kakaotalk 신규 버전 다운로드
-               -> wine, playlinux를 이용한 설치로 다운로드 방법 변경
-               -> PlayOnLinux를 실행해 Wine을 설치하므로써 문제 해결
-    ````
-
 - **mdadm 오류**
 
-    ![kakao9](https://user-images.githubusercontent.com/77660379/112167980-42b0c080-8c34-11eb-9ac6-532d44a9db0d.JPG)
-
-    ![kakao10](https://user-images.githubusercontent.com/77660379/112168040-4f351900-8c34-11eb-9e69-67f973d23a63.JPG)
-
-    ![kakao11](https://user-images.githubusercontent.com/77660379/112168102-5b20db00-8c34-11eb-8630-3d50d99a76f1.JPG)
-
-    ![kakao12](https://user-images.githubusercontent.com/77660379/112168163-670c9d00-8c34-11eb-9cdd-f10b60047fb7.JPG)
-
-    ![kakao13](https://user-images.githubusercontent.com/77660379/112168242-75f34f80-8c34-11eb-9216-345cc4045474.JPG)
-
-    ![오류1](https://user-images.githubusercontent.com/77660379/112168342-8f949700-8c34-11eb-9d11-09ff9c621049.JPG)
+    ![mdadm 오류해결](https://user-images.githubusercontent.com/77660379/113013191-781a5880-91b6-11eb-96b3-4d9fa839f4cc.JPG))
 
     ```
-    문제발생 및 고민한 내용 : Tasksel 로 페키지 설치 단계에서 작동 오류
+    문제발생 및 고민한 내용 : mdadm 을 이용한 RAID 생성 오류
 
-    해결 과정 : tasksel 실행 > Ubuntu desktop 선택 > <ok> 선택 후 엔터
-               -> 터미널 창으로 커서가 넘어가 어떠한 키를 누르던 이상한 문자가 출력됨 
-               -> Esc 키로 터미널 창을 닫으려 시도했으나 불가능
-               -> 마우스로 Poweroff 강제종료 시킴
-               -> 다시 한번 시도했으나 이전과 같은 문제 발생, 창이 멈춤
-               -> 다시 한번 시도하고 터미널 창으로 커서가 넘어갔어도 기다림
-               -> 오랫동안 기다리니 패키지 설치 창으로 넘어가 자동으로 설치 진행됨
+    해결 과정 : 'You haven't given enough devices (real or missing) to create this array'라는 오류 문구 발생
+               -> 한참을 고민했으나 오류가 무엇인지 찾지 못함
+               -> 다시 한번 RAID 생성 구문을 터미널 창에 입력
+               -> 오류 없이 실행됨으로 해결 완료
+               -> 오류가 발생할 수 밖에 없었던 이유를 찾음
+               -> * /dev/sdb1 /dev/sdc1 구문에서 sdb1 과 /dev 사이에 ' '(띄어쓰기)를 입력하지 않았었음
     ````
 
 * ### **참고할 만한 내용**
 ```
-gftp란?
-    gftp는 무료/오픈 소스 멀티 스레드 파일 전송 프로토콜 클라이언트 프로그램
-    FTP, FTPS, HTTP, HTTPS, SFTP 및 FSP 프로토콜뿐만 아니라 FTP 및 HTTP 프록시 서버 지원 및 FXP 파일 전송(FTP를 통해 두 원격 서버 간에 파일 전송)에 대한 지원이 있음
-    GTK+를 사용해 만든 X 윈도우용 FTP클라이언트 프로그램
-    GUI 형태로 되어 있어 windows를 주로 사용하는 이용자들에게 편리
+리눅스 백업 관리 5주차 실습 전 서버 초기화를 위해 백업 진행
 
-gtfp의 특징
-    파일전송중 인터럽트된 파일의 이어받기 가능, 동시 다운로드 가능, FTP,HTTP,SSH 프로토콜 지원, 파일 전송 큐, 디렉터리 전체받기 가능, FTP 와 HTTP 프록시 지원, 원격 디렉터리 캐시, 드래그앤드롭 지원, 매우 뛰어난 접속 매니저 등 의 다양한 기능이 있음
+백업 종류
+1) 완전 백업(Full Backup) : 모든 데이터를 통째로 한 번에 백업하는 방법
+2) 증분 백업 (Incremental Backup) : 완전 백업한 이후에 변경된 데이터만을 주기적으로 따로따로 백업하는 방법
+3) 차등 백업 (Differential Backup) : 완전 백업 후의 모든 데이터에 대해 백업하는 방법
+
+백업/복구 명령어
+1) 디렉터리 단위의 백업
+    -> tar : 마운트 된 파일시스템 내에서 백업, 주로 사용
+       cpip : 마운트된 파일시스템 내에서 백업
+2) 파일시스템 단위의 백업 : dump/restore
+3) 디스크 단위의 백업 : dd (잘 사용하지 않음)
+
+tar 명령어를 통한 백업
+1. su - // root 계정으로 변경하여 시스템 파일도 건드릴 수 있게 함
+2. tar cvpzf{저장될경로와이름.tgz}--exclude=/proc--exclude=/lost+found--exclude=/media --exclude=/mnt --exclude=/dev --exclude=/sys --exclude={저장될경로와이름.tgz}/      
+    // 제외할 폴더는 --exclude 옵션을 사용
+     // c:새로운 파일 생성, v: 진행목록을 표시, p:파일 권한 정보를 기억, z:gzip으로 압축, f:파일이름 설정
+     // 맨뒤에 /는, /에서부터 백업 (=최상단)
+
+주기적인 백업 실행
+crontab -e
+0.4***/root/backup.sh1>/dev/nukk 2>/dev/null // 오전 4시에 실행
+
+앞으로 실습을 진행하면서 백업은 필수사항이 될 것 같아 주기적인 자동 백업 방법을 추가적으로 알아보았다. 아직 리눅스에 대한 이해가 더 필요하기에 자동 백업을 실행시켜놨다가 괜히 문제가 발생할 수도 있을 것 같아 아직 시험해 보지는 않았다.
 ```
 
 * ### **회고 (+,-,!)**
 ```
 1. 뿌듯했던 점 (+)
-    => 오류가 발생했을 때 스스로 문제 해결 방법을 찾은 것
-          -> 카카오톡 설치 방법이 한가지가 아니기 때문에 XP 배포판이 사라진 현재, wine과 playonlinux를 활용한 방안으로 설치 방향 바꿈
+    => vi 대신 gedit을 주로 사용
+          -> vu 를 이용할 때 i를 이용해 쓰기모드로 바꿔줘야하거나 다음 입력으로 넘어갈 때 ESC버튼을 눌러야하는 등 굉장히 번거러움
+             이러한 명령어를 제대로 사용하지 않을 경우 이상한 문자가 적히거나 커서가 안움직이는 등의 문제 발생
+             강의에서 vi 로 파일 내용을 수정할때마다 gedit 명령어를 사용했음 
+             리눅스에 대한 이해가 쌓일 수록 보다 나한테 맞고 보다 쉬운 방법을 하나씩 스스로 활용할 수 있어진다는 사실에 뿌듯했음
 
 2. 보완할 점 (-)
-    => 오류가 발생했을 때 바로 강제종료 버튼을 눌렀던 점
-      -> 오류가 발생할 경우 기다려보기
+    => 터미널 창에 명령어를 입력할 때 띄어쓰기 하나도 중요하다는 사실 자각할 것
+      -> 특히 긴 문장을 입력할 때 문자 하나라도, 혹은 띄어쓰기 하나라도 한번 더 검토하기
+         띄어쓰기 같은 작은 부분 때문에 오류가 생길 것이라 생각해보지 않아서 한참 헤맸음
 
 3. 꼭 기억할 점 (!) 
-    => GNOME(GNU Network Object Model Environment)은 사용자가 컴퓨터를 쉽게 사용하고 설정할 수 있도록 해주는 친숙한 데스크톱 환경
+    => 
        데스크톱 프로그램 집합의 일종이자 이를 개발하는 프로젝트의 이름
        기본적으로 C로 작성되었으나 C++, java, ruby, c#, python 등 많은 언어들에 대한 바인딩이 존재하기 때문에 C를 사용하지 않는 개발자라도 자신에게 맞는 언어로 그놈에서 사용하는 응용 프로그램을 작성할 수 있음
