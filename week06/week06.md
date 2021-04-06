@@ -15,35 +15,41 @@
 
   - server 초기화 후 하드디스크 2개 준비 (2GB, 3GB)
 
-    ![하드디스크파티션](https://user-images.githubusercontent.com/77660379/113011800-1c9b9b00-91b5-11eb-85f6-647e4295f6b1.JPG)
+    ![1](https://user-images.githubusercontent.com/77660379/113737105-b379d180-9738-11eb-8fa2-24f7a1061e56.JPG)
 
   - 물리적인 볼륨(PV) 생성
 
-    ![raid1](https://user-images.githubusercontent.com/77660379/113011849-291ff380-91b5-11eb-8c0d-16bfcadcfdaf.JPG)
+    ![2 물리적인 볼륨(PV) 생성](https://user-images.githubusercontent.com/77660379/113737191-c68ca180-9738-11eb-98ca-af04194b89b2.JPG)
     
   - 물리볼륨을 묶어 볼륨그룹(VG) 생성
 
-    ![raid1_2](https://user-images.githubusercontent.com/77660379/113011900-363ce280-91b5-11eb-927e-05eb69293cb9.JPG)
+    ![3 물리볼륨을 묶어 볼륨그룹(VG) 생성](https://user-images.githubusercontent.com/77660379/113737279-dc01cb80-9738-11eb-9c2f-03fb03c3d23b.JPG)
 
   - 논리볼륨(LV) 생성 (1GB, 1GB, 2GB, 1GB)
 
-    ![raid1_2](https://user-images.githubusercontent.com/77660379/113011900-363ce280-91b5-11eb-927e-05eb69293cb9.JPG)
+    ![4 논리볼륨(LV) 생성](https://user-images.githubusercontent.com/77660379/113737338-e754f700-9738-11eb-9040-76b575147de5.JPG)
 
   - 각 논리볼륨에 파일시스템 생성
 
-    ![raid1_2](https://user-images.githubusercontent.com/77660379/113011900-363ce280-91b5-11eb-927e-05eb69293cb9.JPG)
+    ![5 각 논리볼륨에 파일시스템 생성](https://user-images.githubusercontent.com/77660379/113737387-f471e600-9738-11eb-8f43-b25c4bcd4f93.JPG)
 
   - 논리볼륨 마운트
 
-    ![raid1_2](https://user-images.githubusercontent.com/77660379/113011900-363ce280-91b5-11eb-927e-05eb69293cb9.JPG)
+    ![6 논리볼륨 마운트](https://user-images.githubusercontent.com/77660379/113737481-06538900-9739-11eb-9b79-7ba4967816a7.JPG)
 
   - 부팅시 자동 마운트 설정
 
-    ![raid1_2](https://user-images.githubusercontent.com/77660379/113011900-363ce280-91b5-11eb-927e-05eb69293cb9.JPG)
+    ![7 부팅시 자동 마운트 설정](https://user-images.githubusercontent.com/77660379/113737531-12d7e180-9739-11eb-9954-6dad596e87b5.JPG)
 
   - LV 상태 출력
 
-    ![raid1_2](https://user-images.githubusercontent.com/77660379/113011900-363ce280-91b5-11eb-927e-05eb69293cb9.JPG)
+    ![8-1](https://user-images.githubusercontent.com/77660379/113737595-21be9400-9739-11eb-9c7b-a7465415b119.JPG)
+
+    ![8-2](https://user-images.githubusercontent.com/77660379/113737647-300cb000-9739-11eb-8a71-a41481917a94.JPG)
+
+    ![8-3](https://user-images.githubusercontent.com/77660379/113737722-40bd2600-9739-11eb-9a7e-f17190f19016.JPG)
+
+    ![8-4](https://user-images.githubusercontent.com/77660379/113737770-4ca8e800-9739-11eb-9224-7030c99e7352.JPG)
 
 
 ## 2. 실습과제 Review
