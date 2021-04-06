@@ -92,29 +92,20 @@
 
 * ### **문제가 발생하거나 고민한 내용 + 해결 과정**
 
-- **mdadm 오류**
-
-    ![sdc1 입력 오류](https://user-images.githubusercontent.com/77660379/113741813-fb9af300-973c-11eb-8c11-dabf22d6c928.JPG)
-
-    ![sdb1 까지도 오류](https://user-images.githubusercontent.com/77660379/113741965-19685800-973d-11eb-855e-6aa119b1a635.JPG)
-
-    ![초기화](https://user-images.githubusercontent.com/77660379/113742050-2e44eb80-973d-11eb-8657-f4c289486101.JPG)
-
-    ![초기화후디스크](https://user-images.githubusercontent.com/77660379/113742107-3d2b9e00-973d-11eb-8c19-5942655b922d.JPG)
+- **sdc1 오류**
 
     ![sdc1 입력 오류 해결](https://user-images.githubusercontent.com/77660379/113742174-4c125080-973d-11eb-9889-12e0102fbbb2.JPG)
 
-    ![전부 해결완료](https://user-images.githubusercontent.com/77660379/113742204-57657c00-973d-11eb-8aa3-6243bfe53376.JPG)
+    ![sdc1 입력 오류](https://user-images.githubusercontent.com/77660379/113741813-fb9af300-973c-11eb-8c11-dabf22d6c928.JPG)
 
     ```
-    문제발생 및 고민한 내용 : mdadm 을 이용한 RAID 생성 오류
+    문제발생 및 고민한 내용 : sdc1 파티션 생성 오류
 
-    해결 과정 : 'You haven't given enough devices (real or missing) to create this array'라는 오류 문구 발생
-               -> 한참을 고민했으나 오류가 무엇인지 찾지 못함
-               -> 다시 한번 RAID 생성 구문을 터미널 창에 입력
-               -> 오류 없이 실행됨으로 해결 완료
-               -> 오류가 발생할 수 밖에 없었던 이유를 찾음
-               -> * /dev/sdb1 /dev/sdc1 구문에서 sdb1 과 /dev 사이에 ' '(띄어쓰기)를 입력하지 않았었음
+    해결 과정 : sdc1 생성시 설정을 잘못한 상태에서 저장해버림
+               -> sdc1을 영구적으로 삭제한 후 sdc1을 새로 만들기로 결정함
+               -> fdisk /dev/sdc > d > w 의 과정을 거쳐 파티션을 삭제해줌
+               -> ls -l /dev/sd* 명령어를 통해 디스크 정보를 확인한 결과 sdc1이 삭제됨
+               -> 강의 내용과 같은 sdc1을 새롭게 생성해줌
     ````
 
 * ### **참고할 만한 내용**
