@@ -110,8 +110,7 @@
 
 * ### **참고할 만한 내용**
 
-[http://www.lionheart.pe.kr/index.php?mid=board_uFoa63&order_type=desc&page=3&document_srl=2113&sort_index=title][blog]
-
+[fdisk로 파티션 삭제하기](http://www.lionheart.pe.kr/index.php?mid=board_uFoa63&order_type=desc&page=3&document_srl=2113&sort_index=title)
 ```
 Command(m for hep) : p
   => 현재 파티션 정보 확인
