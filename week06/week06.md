@@ -109,33 +109,27 @@
     ````
 
 * ### **참고할 만한 내용**
+
+[http://www.lionheart.pe.kr/index.php?mid=board_uFoa63&order_type=desc&page=3&document_srl=2113&sort_index=title][blog]
+
 ```
-리눅스 백업 관리 5주차 실습 전 서버 초기화를 위해 백업 진행
+Command(m for hep) : p
+  => 현재 파티션 정보 확인
 
-백업 종류
-1) 완전 백업(Full Backup) : 모든 데이터를 통째로 한 번에 백업하는 방법
-2) 증분 백업 (Incremental Backup) : 완전 백업한 이후에 변경된 데이터만을 주기적으로 따로따로 백업하는 방법
-3) 차등 백업 (Differential Backup) : 완전 백업 후의 모든 데이터에 대해 백업하는 방법
+Command(m for hep) : d
+  => 파티션 삭제 (번호 고르기 sdb 뒤에 나오는 숫자로 확인)
 
-백업/복구 명령어
-1) 디렉터리 단위의 백업
-    -> tar : 마운트 된 파일시스템 내에서 백업, 주로 사용
-       cpip : 마운트된 파일시스템 내에서 백업
-2) 파일시스템 단위의 백업 : dump/restore
-3) 디스크 단위의 백업 : dd (잘 사용하지 않음)
+Command(m for hep) : n
+  => 파티션을 전부 삭제한 후 n을 쳐서 새로운 파티션 생성
 
-tar 명령어를 통한 백업
-1. su - // root 계정으로 변경하여 시스템 파일도 건드릴 수 있게 함
-2. tar cvpzf{저장될경로와이름.tgz}--exclude=/proc--exclude=/lost+found--exclude=/media --exclude=/mnt --exclude=/dev --exclude=/sys --exclude={저장될경로와이름.tgz}/      
-    // 제외할 폴더는 --exclude 옵션을 사용
-     // c:새로운 파일 생성, v: 진행목록을 표시, p:파일 권한 정보를 기억, z:gzip으로 압축, f:파일이름 설정
-     // 맨뒤에 /는, /에서부터 백업 (=최상단)
+Command(m for hep) : l
+  => 선택할 수 있는 파티션 타입 확인(ex. Linux, fat 등등)
 
-주기적인 백업 실행
-crontab -e
-0.4***/root/backup.sh1>/dev/nukk 2>/dev/null // 오전 4시에 실행
+Command(m for hep) : t
+  => 파티션 넘버를 선택한 후 위에서 기억한 파티션 타입 입력
 
-앞으로 실습을 진행하면서 백업은 필수사항이 될 것 같아 주기적인 자동 백업 방법을 추가적으로 알아보았다. 아직 리눅스에 대한 이해가 더 필요하기에 자동 백업을 실행시켜놨다가 괜히 문제가 발생할 수도 있을 것 같아 아직 시험해 보지는 않았다.
+Command(m for hep) : w
+  => 저장하고 나옴
 ```
 
 * ### **회고 (+,-,!)**
