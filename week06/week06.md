@@ -94,7 +94,17 @@
 
 - **mdadm 오류**
 
-    ![mdadm 오류해결](https://user-images.githubusercontent.com/77660379/113013191-781a5880-91b6-11eb-96b3-4d9fa839f4cc.JPG))
+    ![sdc1 입력 오류](https://user-images.githubusercontent.com/77660379/113741813-fb9af300-973c-11eb-8c11-dabf22d6c928.JPG)
+
+    ![sdb1 까지도 오류](https://user-images.githubusercontent.com/77660379/113741965-19685800-973d-11eb-855e-6aa119b1a635.JPG)
+
+    ![초기화](https://user-images.githubusercontent.com/77660379/113742050-2e44eb80-973d-11eb-8657-f4c289486101.JPG)
+
+    ![초기화후디스크](https://user-images.githubusercontent.com/77660379/113742107-3d2b9e00-973d-11eb-8c19-5942655b922d.JPG)
+
+    ![sdc1 입력 오류 해결](https://user-images.githubusercontent.com/77660379/113742174-4c125080-973d-11eb-9889-12e0102fbbb2.JPG)
+
+    ![전부 해결완료](https://user-images.githubusercontent.com/77660379/113742204-57657c00-973d-11eb-8aa3-6243bfe53376.JPG)
 
     ```
     문제발생 및 고민한 내용 : mdadm 을 이용한 RAID 생성 오류
