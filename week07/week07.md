@@ -32,7 +32,7 @@
 
   * bash script (Delete a File) 실행 결과
 
-    - bash 실행 후 지워질 파일 미리 생성
+    - bash 실행 후 지워질 파일(delete.sh) 미리 생성
 
         ![지워질것2](https://user-images.githubusercontent.com/77660379/114817152-74ace100-9df4-11eb-9a66-28ed00b528aa.JPG)
 
@@ -51,6 +51,7 @@
 ## 2. 실습과제 Review
 
 * ### **새로 배운 내용**
+
 ```
 1. Shell
     => 사용자의 명령을 해석하여 커널에 전달
@@ -93,7 +94,7 @@
 
 * ### **문제가 발생하거나 고민한 내용 + 해결 과정**
 
-- **sdc1 오류**
+- **사용자 추가, 사용자 패스워드 출력 오류**
 
     ![오오류1](https://user-images.githubusercontent.com/77660379/114819652-c6f00100-9df8-11eb-91c0-07dca32d84d4.JPG)
 
@@ -113,26 +114,40 @@
 
 * ### **참고할 만한 내용**
 
-[fdisk로 파티션 삭제하기](http://www.lionheart.pe.kr/index.php?mid=board_uFoa63&order_type=desc&page=3&document_srl=2113&sort_index=title)
-```
-Command(m for hep) : p
-  => 현재 파티션 정보 확인
+  * 리눅스 text모드, gui모드 설정
 
-Command(m for hep) : d
-  => 파티션 삭제 (번호 고르기 sdb 뒤에 나오는 숫자로 확인)
+    [리눅스 모드 변경하기](https://shsec.tistory.com/7)
 
-Command(m for hep) : n
-  => 파티션을 전부 삭제한 후 n을 쳐서 새로운 파티션 생성
+    ```
+    7버전 이하에서는 text모드와 gui모드설정을 /etc/inittab 파일을 수정하여 설정하였지만,
+    7버전 이후에서는 systemctl 명령어를 사용하여 변경이 가능하다.
 
-Command(m for hep) : l
-  => 선택할 수 있는 파티션 타입 확인(ex. Linux, fat 등등)
+    systemctl get-default
+    => 현재 모드 확인
 
-Command(m for hep) : t
-  => 파티션 넘버를 선택한 후 위에서 기억한 파티션 타입 입력
+    systemctl set-default multi-user.target
+    => text 모드로 변경
 
-Command(m for hep) : w
-  => 저장하고 나옴
-```
+    systemctl set-default graphical.target
+    => gui 모드로 변경
+    ```
+
+
+  * 리눅스 text모드, gui모드 설정
+
+    ```
+    7버전 이하에서는 text모드와 gui모드설정을 /etc/inittab 파일을 수정하여 설정하였지만,
+    7버전 이후에서는 systemctl 명령어를 사용하여 변경이 가능하다.
+
+    systemctl get-default
+    => 현재 모드 확인
+
+    systemctl set-default multi-user.target
+    => text 모드로 변경
+
+    systemctl set-default graphical.target
+    => gui 모드로 변경
+    ```
 
 * ### **회고 (+,-,!)**
 ```
