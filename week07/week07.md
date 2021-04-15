@@ -134,7 +134,7 @@
 
   * 30 bash script examples
 
-    [bash script ex]](https://linuxhint.com/30_bash_script_examples/#t21)
+    [bash script ex](https://linuxhint.com/30_bash_script_examples/#t21)
 
     ```
     Bash 스크립트는 셸 명령 실행, 여러 명령 실행, 관리 작업 사용자 지정, 작업 자동화 수행 등 다양한 용도로 사용할 수 있다.
