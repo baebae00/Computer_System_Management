@@ -14,44 +14,21 @@
   
 * ### **하드디스크 2개 추가(2GB, 3GB) / LV 4개 설정(1GB, 1GB, 2GB, 1GB)** <br>
 
-  - server 초기화 후 하드디스크 2개 준비 (2GB, 3GB)
+  - bash 실행 후 지워질 파일 미리 생성
 
-    ![1](https://user-images.githubusercontent.com/77660379/113737105-b379d180-9738-11eb-8fa2-24f7a1061e56.JPG)
+    ![지워질것2](https://user-images.githubusercontent.com/77660379/114817152-74ace100-9df4-11eb-9a66-28ed00b528aa.JPG)
 
-  - 물리적인 볼륨(PV) 생성
+  - '이 파일은 지워질 파일' 이라는 주석 추가
 
-    ![2 물리적인 볼륨(PV) 생성](https://user-images.githubusercontent.com/77660379/113737191-c68ca180-9738-11eb-98ca-af04194b89b2.JPG)
+    ![지워질것3](https://user-images.githubusercontent.com/77660379/114817198-8b533800-9df4-11eb-8670-c3d36267ea3c.JPG)
     
-  - 물리볼륨을 묶어 볼륨그룹(VG) 생성
+  - 사용자로부터 파일이름을 입력받아 제거해주는 bash 생성
 
-    ![3 물리볼륨을 묶어 볼륨그룹(VG) 생성](https://user-images.githubusercontent.com/77660379/113737279-dc01cb80-9738-11eb-9c2f-03fb03c3d23b.JPG)
+    ![만든것1](https://user-images.githubusercontent.com/77660379/114817223-95753680-9df4-11eb-8a5b-a1e94608f33b.JPG)
 
-  - 논리볼륨(LV) 생성 (1GB, 1GB, 2GB, 1GB)
+  - bash 실행 후 제거된 'delete.sh' 파일
 
-    ![4 논리볼륨(LV) 생성](https://user-images.githubusercontent.com/77660379/113737338-e754f700-9738-11eb-9040-76b575147de5.JPG)
-
-  - 각 논리볼륨에 파일시스템 생성
-
-    ![5 각 논리볼륨에 파일시스템 생성](https://user-images.githubusercontent.com/77660379/113737387-f471e600-9738-11eb-8f43-b25c4bcd4f93.JPG)
-
-  - 논리볼륨 마운트
-
-    ![6 논리볼륨 마운트](https://user-images.githubusercontent.com/77660379/113737481-06538900-9739-11eb-9b79-7ba4967816a7.JPG)
-
-  - 부팅시 자동 마운트 설정
-
-    ![7 부팅시 자동 마운트 설정](https://user-images.githubusercontent.com/77660379/113737531-12d7e180-9739-11eb-9954-6dad596e87b5.JPG)
-
-  - LV 상태 출력
-
-    ![8-1](https://user-images.githubusercontent.com/77660379/113737595-21be9400-9739-11eb-9c7b-a7465415b119.JPG)
-
-    ![8-2](https://user-images.githubusercontent.com/77660379/113737647-300cb000-9739-11eb-8a71-a41481917a94.JPG)
-
-    ![8-3](https://user-images.githubusercontent.com/77660379/113737722-40bd2600-9739-11eb-9a7e-f17190f19016.JPG)
-
-    ![8-4](https://user-images.githubusercontent.com/77660379/113737770-4ca8e800-9739-11eb-9224-7030c99e7352.JPG)
-
+    ![만든것2](https://user-images.githubusercontent.com/77660379/114817293-af167e00-9df4-11eb-8747-f5e5deb60baa.JPG)
 
 ## 2. 실습과제 Review
 
