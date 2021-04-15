@@ -12,23 +12,41 @@
 
 * ### **유용한 bash script 를 하나 검색하여, 유용한 이유, 해당 스크립트 설명, 실행 결과 작성**
   
-* ### **하드디스크 2개 추가(2GB, 3GB) / LV 4개 설정(1GB, 1GB, 2GB, 1GB)** <br>
-
-  - bash 실행 후 지워질 파일 미리 생성
-
-    ![지워질것2](https://user-images.githubusercontent.com/77660379/114817152-74ace100-9df4-11eb-9a66-28ed00b528aa.JPG)
-
-  - '이 파일은 지워질 파일' 이라는 주석 추가
-
-    ![지워질것3](https://user-images.githubusercontent.com/77660379/114817198-8b533800-9df4-11eb-8670-c3d36267ea3c.JPG)
+* ### **bash script (Delete a File)** <br>
     
-  - 사용자로부터 파일이름을 입력받아 제거해주는 bash 생성
+  * bash script (Delete a File)가 유용한 이유
 
-    ![만든것1](https://user-images.githubusercontent.com/77660379/114817223-95753680-9df4-11eb-8a5b-a1e94608f33b.JPG)
+    ```
+    'rm' 명령어를 사용해 특정 파일을 삭제하는 기존의 방식은 디렉터리의 포함관계, 예를들어 '~/code/temp/*' 와 같이 해당 파일이 포함되어 있는 경로를 알아야 정확한 제거가 가능하다.
+    그러나 이번 과제를 수행하면서 생성한 'delete_file.sh' bash script를 사용한다면 제거하고 싶은 파일명만 입력하면 자동적으로 삭제 가능하다는 점에서 유용하다고 생각했다. 
+    ```
 
-  - bash 실행 후 제거된 'delete.sh' 파일
+  * bash script (Delete a File) 설명
 
-    ![만든것2](https://user-images.githubusercontent.com/77660379/114817293-af167e00-9df4-11eb-8747-f5e5deb60baa.JPG)
+    ```
+    'rm' 명령어는 파일을 제거하는 데에 사용된다.
+    bash script 중 rm의 역할을 대신해 즐 'delete_file.sh' 를 생성해 보았다.
+    이 bash는 사용자로부터 삭제할 파일명을 입력받아 제거해주는 셸이다.
+    '-i' 옵션은 파일을 제거하기 전에 사용자로부터 권한을 얻는 데 사용된다.
+    ```
+
+  * bash script (Delete a File) 실행 결과
+
+    - bash 실행 후 지워질 파일 미리 생성
+
+        ![지워질것2](https://user-images.githubusercontent.com/77660379/114817152-74ace100-9df4-11eb-9a66-28ed00b528aa.JPG)
+
+    - '이 파일은 지워질 파일' 이라는 주석 추가
+
+        ![지워질것3](https://user-images.githubusercontent.com/77660379/114817198-8b533800-9df4-11eb-8670-c3d36267ea3c.JPG)
+    
+    - 사용자로부터 파일이름을 입력받아 제거해주는 bash 생성
+
+        ![만든것1](https://user-images.githubusercontent.com/77660379/114817223-95753680-9df4-11eb-8a5b-a1e94608f33b.JPG)
+
+     - bash 실행 후 제거된 'delete.sh' 파일
+
+        ![만든것2](https://user-images.githubusercontent.com/77660379/114817293-af167e00-9df4-11eb-8747-f5e5deb60baa.JPG)
 
 ## 2. 실습과제 Review
 
@@ -77,9 +95,11 @@
 
 - **sdc1 오류**
 
-    ![sdc1 입력 오류 해결](https://user-images.githubusercontent.com/77660379/113742174-4c125080-973d-11eb-9889-12e0102fbbb2.JPG)
+    ![오오류1](https://user-images.githubusercontent.com/77660379/114819652-c6f00100-9df8-11eb-91c0-07dca32d84d4.JPG)
 
-    ![sdc1 입력 오류](https://user-images.githubusercontent.com/77660379/113741813-fb9af300-973c-11eb-8c11-dabf22d6c928.JPG)
+    ![오오류2](https://user-images.githubusercontent.com/77660379/114819695-d707e080-9df8-11eb-9854-aa260334fe94.JPG)
+
+    ![오류3](https://user-images.githubusercontent.com/77660379/114819756-e71fc000-9df8-11eb-80ba-53ae40bf05b8.JPG)
 
     ```
     문제발생 및 고민한 내용 : sdc1 파티션 생성 오류
