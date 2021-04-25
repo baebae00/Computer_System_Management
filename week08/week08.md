@@ -12,39 +12,58 @@
 
 * ### *#1* **사용자 계정 생성, 그룹 설정에서부터 공동 편집 및 관리를 위한 링크 파일 생성하기**
   
-* #### **ryan(라이언), apeach(어피치), con(콘) 각각이 사용할 수 있는 파일의 용량 제한 by Quota** <br>
+* #### **cs, it, ss-univ 그룹을 생성 및 그룹에 계정 등록하기 & 공동 편집 및 관리를 위한 링크 파일을 생성하고 수정하기** <br>
     
-  * 새로운 HDD 인식
+  * 사용자 계정 생성 및 관리
     <br>
 
-    먼저 server(b)를 초기화한 후 10GB의 새로운 HDD를 장착했다. 이후 파티션, 파일시스템을 차례로 생성한 후 부팅시 자동 마운트 되도록 설정해 주었다.
+    cs, it, ss-univ 그룹을 생성한 후 cs-01, cs-02 계정은 cs, ss-univ 그룹에, it-01, it-02 계정은 it 그룹에 등록했다.
     <br><br>
 
-  * 쿼터 설정
+  * 공동 편집 및 관리를 위한 링크 파일 생성
     <br>
     
-    본격적으로 사용자별 공간 할당 실습을 진행하였다.<br>
-    우선 **라이언, 어피치, 콘 이렇게 세 명의 사용자를 생성해 주었으며 쿼터DB를 생성해 개인별 쿼터를 설정**해 주었다.
+    이후 공동 편집을 위한 링크 파일을 생성하고 파일을 수정할 수 있는 계정을 설정하는 실습을 진행하였다.<br>
+    **그룹별 심볼릭 링크 파일과 원본 파일 백업을 위한 하드 링크 파일을 생성**해 주었다. it-01 보조그룹으로 ss-univ 를 추가하며 여러 계정으로 파일을 수정하고 확인하는 과정을 거쳐 실습을 마무리 하였다. (#2와 같이 변형해 새로 문제를 만들고 싶어 고민했다. 그러나 3주차 실습이 가장 어렵게 느껴진만큼 기존 실습 강의안을 올바르게 따라가며 복습하는 것에 의의를 두기로 했다.)
     <br><br>
 
   * 실행 결과
 
-    - 사용자 계정 3개 생성 (라이언, 어피치, 콘)
+    - 공동 편집을 위한 원본 파일 생성 /board.txt
 
-        ![01](https://user-images.githubusercontent.com/77660379/116003379-b0d41300-a638-11eb-8c78-0fc4c2d27cf4.JPG)
+        ![01](https://user-images.githubusercontent.com/77660379/116006783-bb49d900-a647-11eb-8bbc-ad4d82e3424d.JPG)
 
-    - /dev/sdb1 디렉터리 쿼터용으로 설정 후 /userHome 재마운트
+    - 그룹별 접근 (심볼릭) 링크 파일 생성
 
-        ![02](https://user-images.githubusercontent.com/77660379/116003390-c0535c00-a638-11eb-9ec4-aea2a802bc07.JPG)
+        ![02](https://user-images.githubusercontent.com/77660379/116006804-cb61b880-a647-11eb-91a5-dafd61d08546.JPG)
+
+    - 원본 파일 백업을 위한 (하드) 링크 파일 생성 
+
+        ![03](https://user-images.githubusercontent.com/77660379/116006812-d4528a00-a647-11eb-80f6-cacbf1a8b371.JPG)
+
+    - cs-01 계정으로 board.txt 파일 수정
+
+        ![04](https://user-images.githubusercontent.com/77660379/116006824-e16f7900-a647-11eb-9506-753cafe478a5.JPG)
+
+        ![05](https://user-images.githubusercontent.com/77660379/116006832-eb917780-a647-11eb-83d0-012ea503cd75.JPG)
     
-    - 쿼터 설정
+    - it-01, it-02 보조그룹 ss-univ 설정
 
-        ![03](https://user-images.githubusercontent.com/77660379/116003409-cea17800-a638-11eb-8153-b597d547f650.JPG)
+        ![06](https://user-images.githubusercontent.com/77660379/116006846-f77d3980-a647-11eb-90c0-dd4a23f96519.JPG)
 
-     - 사용자별 공간 할당(라이언, 어피치, 콘 모두 15MB 공간을 각각 할당해주었다.)<br>
-        실상 라이언에게 soft 10240KB, hard 15350KB 를 할당한 후 edquota -p 명령어를 사용해 어피치와 콘에게도 같은 양의 공간을 할당해 준 것
+    - it-02 계정으로 board.txt 파일 수정
 
-        ![04](https://user-images.githubusercontent.com/77660379/116003420-d8c37680-a638-11eb-873e-840485184c92.JPG)
+        ![07](https://user-images.githubusercontent.com/77660379/116006865-0368fb80-a648-11eb-8268-6bb28e1b1783.JPG)
+
+        ![08](https://user-images.githubusercontent.com/77660379/116006869-07951900-a648-11eb-8a42-2328cb624771.JPG)
+
+    - 원본 파일 삭제 및 링크 파일 확인
+
+        ![09](https://user-images.githubusercontent.com/77660379/116006883-1a0f5280-a648-11eb-8623-9f6dbc17957a.JPG)
+
+    - 원본 파일 백업 및 링크 파일 확인 (권한 보존)
+
+        ![10](https://user-images.githubusercontent.com/77660379/116006898-25627e00-a648-11eb-9ef1-676fe4a407a5.JPG)
 <br><br><br>
 
 * ### *#2* **사용자 계정 생성 후 Quota 로 사용자별 공간 할당해보기**
@@ -85,7 +104,7 @@
 
 
 
-## 2. 실습과제 Review
+## 2. 복습
 
 * ### **새로 배운 내용**
 
