@@ -137,7 +137,6 @@
 
 - **remount 오류**
 
-    <br>
     장치 리마운트 과정에서 명령어를 입력했더니 자꾸만 오류가 났다. <br>
 
     ![오류01](https://user-images.githubusercontent.com/77660379/116006967-7b372600-a648-11eb-8f57-864695d6929c.JPG)
