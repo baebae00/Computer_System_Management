@@ -136,16 +136,17 @@
 * ### **문제가 발생하거나 고민한 내용 + 해결 과정**
 
 - **remount 오류**
+    <br>
+    장치 리마운트 과정에서 명령어를 입력했더니 자꾸만 오류가 났다. 
 
     ![오류01](https://user-images.githubusercontent.com/77660379/116006967-7b372600-a648-11eb-8f57-864695d6929c.JPG)
 
+    <br>처음 오류가 발생하였을 때는 mount -options remount /userHome 명령어에서 문제가 생긴 줄 알고 options를 o로 변경해 보았다.(오류 해결을 위해 찾아본 사이트에서 제공한 방법) 그러나 오류는 해결되지 않았다. 따라서 상위 과정으로 거슬러 올라가 해결점을 찾고자 하였다.
+
     ![오류01_1](https://user-images.githubusercontent.com/77660379/116006971-7ffbda00-a648-11eb-8b5b-2028f114ca04.JPG)
 
-    <br>
-
-    장치 리마운트 과정에서 명령어를 입력했더니 자꾸만 오류가 났다. <br>처음 오류가 발생하였을 때는 mount -options remount /userHome 명령어에서 문제가 생긴 줄 알고 options를 o로 변경해 보았다.(오류 해결을 위해 찾아본 사이트에서 제공한 방법) 그러나 오류는 해결되지 않았다. 따라서 상위 과정으로 거슬러 올라가 해결점을 찾고자 하였다.
     <br>defaults, usrjquota=aquota.user,jqfmt=vfsv0 뮨장에서 vfsv()로 변경해보아도 해결되지 않았다. 결국 문제점을 찾아냈는데 **usrjquota에서 usr이 아닌 user로 입력했기 때문**이었다.(오타, 띄어쓰기의 중요성은 매주 실습 때 마다 느끼는 것 같다.) 그렇게 해결 완료되었다.
-    <br><br>
+    <br>
 
     - [쿼터 관련 명령어와 옵션 참고](https://jhnyang.tistory.com/265)
 
