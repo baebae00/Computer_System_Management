@@ -30,20 +30,21 @@
 
     - 사용자 계정 3개 생성 (라이언, 어피치, 콘)
 
-        ![지워질것2](https://user-images.githubusercontent.com/77660379/114817152-74ace100-9df4-11eb-9a66-28ed00b528aa.JPG)
+        ![01](https://user-images.githubusercontent.com/77660379/116003379-b0d41300-a638-11eb-8c78-0fc4c2d27cf4.JPG)
 
     - /dev/sdb1 디렉터리 쿼터용으로 설정 후 /userHome 재마운트
 
-        ![지워질것3](https://user-images.githubusercontent.com/77660379/114817198-8b533800-9df4-11eb-8670-c3d36267ea3c.JPG)
+        ![02](https://user-images.githubusercontent.com/77660379/116003390-c0535c00-a638-11eb-9ec4-aea2a802bc07.JPG)
     
     - 쿼터 설정
 
-        ![만든것1](https://user-images.githubusercontent.com/77660379/114817223-95753680-9df4-11eb-8a5b-a1e94608f33b.JPG)
+        ![03](https://user-images.githubusercontent.com/77660379/116003409-cea17800-a638-11eb-8153-b597d547f650.JPG)
 
      - 사용자별 공간 할당(라이언, 어피치, 콘 모두 15MB 공간을 각각 할당해주었다.) 
         실상 라이언에게 soft 10240KB, hard 15350KB 를 할당한 후 edquota -p 명령어를 사용해 어피치와 콘에게도 같은 양의 공간을 할당해 준 것
 
-        ![만든것2](https://user-images.githubusercontent.com/77660379/114817293-af167e00-9df4-11eb-8747-f5e5deb60baa.JPG)
+        ![04](https://user-images.githubusercontent.com/77660379/116003420-d8c37680-a638-11eb-873e-840485184c92.JPG)
+
 
 ## 2. 실습과제 Review
 
