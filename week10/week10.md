@@ -22,8 +22,6 @@
     [원격 접속 실습 영상 링크](https://baedevelog.tistory.com/8)
     <br><br>
 
-<br><br><br>
-
 ## 2. 실습과제 Review
 
 * ### **새로 배운 내용**
@@ -68,16 +66,14 @@
 
 * ### **문제가 발생하거나 고민한 내용 + 해결 과정**
 
-- **사용자 추가, 사용자 패스워드 출력 오류**
+- **server 비어있는 폴더 오류**
 
-    ![오오류1](https://user-images.githubusercontent.com/77660379/114819652-c6f00100-9df8-11eb-91c0-07dca32d84d4.JPG)
+    ![오류1](https://user-images.githubusercontent.com/77660379/117344218-1e592c80-aee0-11eb-9caa-2cc6484d181c.JPG)
 
-    ![오오류2](https://user-images.githubusercontent.com/77660379/114819695-d707e080-9df8-11eb-9854-aa260334fe94.JPG)
-
-    ![오류3](https://user-images.githubusercontent.com/77660379/114819756-e71fc000-9df8-11eb-80ba-53ae40bf05b8.JPG)
+    ![오류2](https://user-images.githubusercontent.com/77660379/117344227-2022f000-aee0-11eb-81ac-e3084663a5b3.JPG)
 
     ```
-    문제발생 및 고민한 내용 : 사용자 추가, 사용자 패스워드 출력에 오류 발생
+    문제발생 및 고민한 내용 : server 가상 머신 실행 오류
 
     해결 과정 : 사용자 계정과 패스워드를 입력하고 존재 여부를 확인하는 과정에서 문제가 발생함
                -> vi adduser-script.sh 에서 ${userList[i]}, ${passwdList[i]} 코드를 작성하였기 때문에 bash 시켰을 때 정보가 차례로 출력되어야 하는데 출력되지 않음
@@ -85,6 +81,20 @@
                -> 문제를 한번에 해결하기 위해 sh 파일 자체를 제거하고 강의를 다시 돌려보며 재생성함
                -> 문제가 해결되고 파일 역시 제대로 저장된 것을 확인함
     ````
+- **사용자 추가, 사용자 패스워드 출력 오류**
+
+    ![오류3](https://user-images.githubusercontent.com/77660379/117344235-21541d00-aee0-11eb-8c5a-8f08b8047a7b.JPG)
+
+    ```
+    문제발생 및 고민한 내용 : dconf-editor 오류
+
+    해결 과정 : dconf-editor 명령어에서 화면창을 띄울 수 없다는 오류창이 발생함
+               -> xhost로 실행시키는 방법 시도했으나 해결 안됨
+               -> dconf-editor는 root가 아닌 사용자 계정에서 실행해야함
+               -> root의 권한에서 dconf-editor를 실행하려하니까 오류가 반복 된 것
+    ````
+    [dconf-editor오류 참고](https://superuser.com/questions/310197/how-do-i-fix-a-cannot-open-display-error-when-opening-an-x-program-after-sshi)
+
 
 * ### **참고할 만한 내용**
 
