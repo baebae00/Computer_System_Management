@@ -75,13 +75,11 @@
     ```
     문제발생 및 고민한 내용 : server 가상 머신 실행 오류
 
-    해결 과정 : 사용자 계정과 패스워드를 입력하고 존재 여부를 확인하는 과정에서 문제가 발생함
-               -> vi adduser-script.sh 에서 ${userList[i]}, ${passwdList[i]} 코드를 작성하였기 때문에 bash 시켰을 때 정보가 차례로 출력되어야 하는데 출력되지 않음
-               -> 중괄호, 소괄호 입력에서 실수가 있었던 것으로 예상됨
-               -> 문제를 한번에 해결하기 위해 sh 파일 자체를 제거하고 강의를 다시 돌려보며 재생성함
-               -> 문제가 해결되고 파일 역시 제대로 저장된 것을 확인함
+    해결 과정 : Server 가상 머신 재설치
+             -> 지난 9주차에 server를 이용하느라 백업폴더에 따로 보관해두었는데 이번에 사용하려하니까 찾을 수 없다는 오류 발생
+             -> 재설치하면서 오류 해결
     ````
-- **사용자 추가, 사용자 패스워드 출력 오류**
+- **config-editor display오류**
 
     ![오류3](https://user-images.githubusercontent.com/77660379/117344235-21541d00-aee0-11eb-8c5a-8f08b8047a7b.JPG)
 
@@ -98,31 +96,27 @@
 
 * ### **참고할 만한 내용**
 
-  * 리눅스 text모드, gui모드 설정
+  * Telnet & SSH & VNC
 
-    [리눅스 모드 변경하기](https://shsec.tistory.com/7)
-
-    ```
-    7버전 이하에서는 text모드와 gui모드설정을 /etc/inittab 파일을 수정하여 설정하였지만,
-    7버전 이후에서는 systemctl 명령어를 사용하여 변경이 가능하다.
-
-    systemctl get-default
-    => 현재 모드 확인
-
-    systemctl set-default multi-user.target
-    => text 모드로 변경
-
-    systemctl set-default graphical.target
-    => gui 모드로 변경
-    ```
-
-  * 30 bash script examples
-
-    [bash script ex](https://linuxhint.com/30_bash_script_examples/#t21)
+    [Telnet & SSH & VNC](https://kimhyun2017.tistory.com/33)
 
     ```
-    Bash 스크립트는 셸 명령 실행, 여러 명령 실행, 관리 작업 사용자 지정, 작업 자동화 수행 등 다양한 용도로 사용할 수 있다.
-    이번 과제에서 생성한 파일제거 bash script 이외에도 유용한 많은 scipt들이 있으니 필요한 셸을 추가적으로 생성하고자 링크를 첨부하였다.
+    Telnet
+    => 오랫동안 전통적으로 사용되어 온 원격 접속 방법
+       보안에 취약함
+       Telnet 서비스를 이용하려면 원격지에서 접속할 pc는 클라이언트가 필요
+       TCP/IP 기반의 프로토콜로 원격지 시스템을 자신의 시스템처럼 사용할 수 있게 하는 원격 터미널 접속 서비스
+       TCP/23번 포트 사용
+       Plain Text
+
+    SHH
+    => Telnet과 용도는 동일하나 Telnet의 약점인 보안성을 강화한 것
+       데이터를 전송할 떄 암호화한 데이터로 전송
+       기본적으로 centOS에서 패키지 설치나 방화벽 허용이 되어있음
+
+    VNC
+    => X윈도우 환경으로 원격접속을 하고싶을 때 사용
+       원격지로 그래픽 화면을 전송하는 원리이므로 속도가 많이 느림
     ```
 
 * ### **회고 (+,-,!)**
