@@ -23,9 +23,14 @@
   * nslookup > seoeun.com
     <br>
 
-    [원격 접속 실습 영상 링크](https://baedevelog.tistory.com/8)
+    ![1도메인](https://user-images.githubusercontent.com/77660379/117953768-51bd1080-b351-11eb-90ea-28d2f0b53455.JPG)
     <br><br>
 
+    *인터파크* -> Adress : 121.254.157.38
+    *알라딘* -> Adress : 211.111.219.12
+    *파리바게트* -> Adress : 13.125.57.70
+    <br><br>
+     
 ## 2. 실습과제 Review
 
 * ### **새로 배운 내용**
@@ -70,11 +75,14 @@
 
 * ### **문제가 발생하거나 고민한 내용 + 해결 과정**
 
-- **server 비어있는 폴더 오류**
+- **SSH 접속 RSA 공유키 충돌오류**
 
-    ![오류1](https://user-images.githubusercontent.com/77660379/117344218-1e592c80-aee0-11eb-9caa-2cc6484d181c.JPG)
+    
+    ![오류1](https://user-images.githubusercontent.com/77660379/117954405-f2133500-b351-11eb-94d2-ff01963e3f44.JPG)
 
-    ![오류2](https://user-images.githubusercontent.com/77660379/117344227-2022f000-aee0-11eb-81ac-e3084663a5b3.JPG)
+    ![오류해결](https://user-images.githubusercontent.com/77660379/117954415-f4758f00-b351-11eb-9a95-5523cd2ccc74.JPG)
+
+    ![오류해결완료](https://user-images.githubusercontent.com/77660379/117954419-f5a6bc00-b351-11eb-9cb0-52a4c7f8ce14.JPG)
 
     ```
     문제발생 및 고민한 내용 : server 가상 머신 실행 오류
@@ -83,9 +91,15 @@
              -> 지난 9주차에 server를 이용하느라 백업폴더에 따로 보관해두었는데 이번에 사용하려하니까 찾을 수 없다는 오류 발생
              -> 재설치하면서 오류 해결
     ````
-- **config-editor display오류**
+    [RSA 공유키 충돌오류 참고](https://cpuu.postype.com/post/30065)
 
-    ![오류3](https://user-images.githubusercontent.com/77660379/117344235-21541d00-aee0-11eb-8c5a-8f08b8047a7b.JPG)
+- **라운드 로빈 방식의 웹 서버 구현 오류**
+
+    ![오류2구동](https://user-images.githubusercontent.com/77660379/117954538-140cb780-b352-11eb-9a8d-e5175dff75bb.JPG)
+
+    ![오류2변경안됨](https://user-images.githubusercontent.com/77660379/117954548-166f1180-b352-11eb-8048-d04d92dfd55e.JPG)
+
+    ![오류2해결](https://user-images.githubusercontent.com/77660379/117954552-1707a800-b352-11eb-90bc-7666e3daa6de.JPG)
 
     ```
     문제발생 및 고민한 내용 : dconf-editor 오류
@@ -95,7 +109,7 @@
                -> dconf-editor는 root가 아닌 사용자 계정에서 실행해야함
                -> root의 권한에서 dconf-editor를 실행하려하니까 오류가 반복 된 것
     ````
-    [dconf-editor오류 참고](https://superuser.com/questions/310197/how-do-i-fix-a-cannot-open-display-error-when-opening-an-x-program-after-sshi)
+    [nslookup 도메인 주소 출력 오류 참고](https://www.digitalocean.com/community/questions/sudo-ufw-status-return-inactive)
 
 
 * ### **참고할 만한 내용**
