@@ -14,13 +14,13 @@
   
 * #### **client의 웹 브라우저에서 "seoeun.com" 으로의 접속 장면과 "seoeun.com" 으로 질의하여 입력된 ip 주소 확인** <br>
     
-  * client의 웹 브라우저에서 www.seoeun.com 으로의 접속 장면
+  * client의 웹 브라우저에서 seoeun.com 으로의 접속 장면
     <br>
 
     [www.seoeun.com 접속 실습 영상](https://baedevelog.tistory.com/9)
     <br><br>
 
-  * nslookup > www.seoeun.com
+  * nslookup > seoeun.com
     <br>
 
     [원격 접속 실습 영상 링크](https://baedevelog.tistory.com/8)
