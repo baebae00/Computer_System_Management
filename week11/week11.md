@@ -110,7 +110,7 @@
     [/etc/bind/*.com.db에 사용된 코드 의미](https://jerryk026.tistory.com/163)
    
     *$TTL*
-    => Time to Live.www.*.com으로 호스트 이름을 질의 했을 떄, 다른 네임 서버가 해당 IP 주소를 캐시에 저장하는 시간을 뜻함
+    => Time to Live.*.com으로 호스트 이름을 질의 했을 떄, 다른 네임 서버가 해당 IP 주소를 캐시에 저장하는 시간을 뜻함
 
     *3H*
     => 3시간
