@@ -106,9 +106,9 @@
   * /etc/bind/*.com.db에 사용된 코드 각각의 의미
    <br>
     ![week11_참고할 만한 내용](https://user-images.githubusercontent.com/77660379/118093750-db7be500-b408-11eb-8edb-d382a4c7c556.JPG)
-   <br>
+   
     [/etc/bind/*.com.db에 사용된 코드 의미](https://jerryk026.tistory.com/163)
-   <br>
+   
     $TTL
     => Time to Live.www.john.com으로 호스트 이름을 질의 했을 떄, 다른 네임 서버가 해당 IP 주소를 캐시에 저장하는 시간을 뜻함
 
