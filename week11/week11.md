@@ -72,11 +72,13 @@
     ![오류해결완료](https://user-images.githubusercontent.com/77660379/117954419-f5a6bc00-b351-11eb-9cb0-52a4c7f8ce14.JPG)
 
     ```
-    문제발생 및 고민한 내용 : server 가상 머신 실행 오류
+    문제발생 및 고민한 내용 : SSH 접속 RSA 공유키 충돌오류
 
-    해결 과정 : Server 가상 머신 재설치
-             -> 지난 9주차에 server를 이용하느라 백업폴더에 따로 보관해두었는데 이번에 사용하려하니까 찾을 수 없다는 오류 발생
-             -> 재설치하면서 오류 해결
+    해결 과정 : ssh@linux* 로 접속 시도
+             -> '중간자 공격'에 대한 경고창 발생
+             -> 이유는 같은 IP 로 기존에 접속한 적이 있는 서버와 RSA 공유키를 교환한 상태에서, 서버가 바뀌었기 때문
+             -> 이 경우는 운영자인 내가 고의적으로 변경한 것이기에, 해킹 등의 침해사고는 아님(스푸핑 X)
+             -> ssh-keygen -R* 명령어를 통해 초기화시켜 오류 해결
     ````
     [RSA 공유키 충돌오류 참고](https://cpuu.postype.com/post/30065)
 
@@ -89,12 +91,12 @@
     ![오류2해결](https://user-images.githubusercontent.com/77660379/117954552-1707a800-b352-11eb-90bc-7666e3daa6de.JPG)
 
     ```
-    문제발생 및 고민한 내용 : dconf-editor 오류
+    문제발생 및 고민한 내용 : nslookup 도메인 주소 출력 오류
 
-    해결 과정 : dconf-editor 명령어에서 화면창을 띄울 수 없다는 오류창이 발생함
-               -> xhost로 실행시키는 방법 시도했으나 해결 안됨
-               -> dconf-editor는 root가 아닌 사용자 계정에서 실행해야함
-               -> root의 권한에서 dconf-editor를 실행하려하니까 오류가 반복 된 것
+    해결 과정 : 기존의 구축된 웹 서버의 IP 주소 3개 확인 시도
+               -> nslookup을 통해 인터파크, 알라딘, 파리바게트 3개의 IP주소를 확인하려 했으나 변경이 안되어있음
+               -> 변경 사항을 저장하기 위한 restart 작업을 건너뛴 것이 문제였음
+               -> systemctl restart named 명령어를 통해 네임 서버를 다시 가동시켜 오류 해결
     ````
     [nslookup 도메인 주소 출력 오류 참고](https://www.digitalocean.com/community/questions/sudo-ufw-status-return-inactive)
 
