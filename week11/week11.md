@@ -103,28 +103,35 @@
 
 * ### **참고할 만한 내용**
 
-  * Telnet & SSH & VNC
+  * /etc/bind/*.com.db에 사용된 코드 각각의 의미
+   <br>
+    ![week11_참고할 만한 내용](https://user-images.githubusercontent.com/77660379/118093750-db7be500-b408-11eb-8edb-d382a4c7c556.JPG)
+   <br>
+    [/etc/bind/*.com.db에 사용된 코드 의미](https://jerryk026.tistory.com/163)
+   <br>
+    $TTL
+    => Time to Live.www.john.com으로 호스트 이름을 질의 했을 떄, 다른 네임 서버가 해당 IP 주소를 캐시에 저장하는 시간을 뜻함
 
-    [Telnet & SSH & VNC](https://kimhyun2017.tistory.com/33)
+    3H
+    => 3시간
 
-    ```
-    Telnet
-    => 오랫동안 전통적으로 사용되어 온 원격 접속 방법
-       보안에 취약함
-       Telnet 서비스를 이용하려면 원격지에서 접속할 pc는 클라이언트가 필요
-       TCP/IP 기반의 프로토콜로 원격지 시스템을 자신의 시스템처럼 사용할 수 있게 하는 원격 터미널 접속 서비스
-       TCP/23번 포트 사용
-       Plain Text
+    @
+    => /etc/named.com에 정의된 john.com을 의미
 
-    SHH
-    => Telnet과 용도는 동일하나 Telnet의 약점인 보안성을 강화한 것
-       데이터를 전송할 떄 암호화한 데이터로 전송
-       기본적으로 centOS에서 패키지 설치나 방화벽 허용이 되어있음
+    SOA
+    => Start Of Authority. 권한의 시작, 괄호 안 숫자는 각각 버전 정보, 상위 네임 서버에 업데이트된 정보 요청하는 간격, 상위 네임 서버에 문제 발생 시 재접속 간격, 상위 네임 서버에 접속 불가시 이전 정보 파기 간격, 이 시간 이후에 정보가 삭제되는 데 걸리는 시간을 뜻함
 
-    VNC
-    => X윈도우 환경으로 원격접속을 하고싶을 때 사용
-       원격지로 그래픽 화면을 전송하는 원리이므로 속도가 많이 느림
-    ```
+   NS
+    => Name Server 설정된 도메인의 네임 서버 역할을 하는 컴퓨터를 지정함
+
+    MX
+    => Mail Exchange. 메일 서버 컴퓨터를 설정
+
+    A
+    => 호스트 이름에 상응하는 IP 주소를 지정
+    
+    CNAME
+    => 호스트 이름에 별칭을 부여할 때 사용
 
 * ### **회고 (+,-,!)**
 
