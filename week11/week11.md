@@ -104,8 +104,8 @@
 * ### **참고할 만한 내용**
 
   * /etc/bind/*.com.db에 사용된 코드 각각의 의미
-   <br>
-    ![week11_참고할 만한 내용](https://user-images.githubusercontent.com/77660379/118093750-db7be500-b408-11eb-8edb-d382a4c7c556.JPG)
+   
+   ![week11_참고할 만한 내용](https://user-images.githubusercontent.com/77660379/118093750-db7be500-b408-11eb-8edb-d382a4c7c556.JPG)
    
     [/etc/bind/*.com.db에 사용된 코드 의미](https://jerryk026.tistory.com/163)
    
