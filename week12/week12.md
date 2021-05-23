@@ -105,20 +105,18 @@
     *MDA(Mail Delivery Agent)*
     => 전송받은 메일을 해당 사용자에게 전달
 
-    **
-    => Start Of Authority. 권한의 시작, 괄호 안 숫자는 각각 버전 정보, 상위 네임 서버에 업데이트된 정보 요청하는 간격, 상위 네임 서버에 문제 발생 시 재접속 간격, 상위 네임 서버에 접속 불가시 이전 정보 파기 간격, 이 시간 이후에 정보가 삭제되는 데 걸리는 시간을 뜻함
+    *메일 전송의 원리*
+    => 사용자는 mail client와 같은 프로그램을 통해 mail 작성 후 , SMTP를 사용해 mail deamon으로 메시지 전송
+       -> mail deamon은 client의 주소를 분석하고 가장 가까운 mail server로 메시지와 정보를 보냄
+       -> 송신자가 보낸 편지가 송신자 측의 전자우편을 관리하는 mail server에 전달되면, mail server는 수신자의 전자우편 주소를 분석해 최단 경로를 찾아 근접한 mail server에 편지를 전달
+       -> 최종 수신자측의 mail server에 도착하기까지 연속적으로 전달하는 중계작업이 계속됨
+       -> 이러한 일련의 작업이 계속적으로 이루어진 후, 송수신자는 정확하게 메일 교환이 가능해짐
 
-   *NS*
-    => Name Server 설정된 도메인의 네임 서버 역할을 하는 컴퓨터를 지정함
-
-    *MX*
-    => Mail Exchange. 메일 서버 컴퓨터를 설정
-
-    *A*
-    => 호스트 이름에 상응하는 IP 주소를 지정
-    
-    *CNAME*
-    => 호스트 이름에 별칭을 부여할 때 사용
+   *MUA&MTA*
+    => 사용자가 직접 접하게 되는 것은 우편 대행자(MUAL: Mail User Agent)
+       이 메일은 크게 두가지로 발전
+        -> BSD(Berkely Software Distribution)에서 개발된 mailx
+        -> System V Unix에서 개발된 Mail
 
 * ### **회고 (+,-,!)**
 
