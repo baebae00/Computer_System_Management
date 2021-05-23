@@ -17,21 +17,11 @@
     <br>
 
     [이메일 주고받기 실습 영상](https://baedevelog.tistory.com/10)
-    <br><br>
-
-  * nslookup > seoeun.com
     <br>
-
-    ![1도메인](https://user-images.githubusercontent.com/77660379/117953768-51bd1080-b351-11eb-90ea-28d2f0b53455.JPG)
-    <br><br>
-
-    *인터파크* -> Adress : 121.254.157.38
-    <br>
-    *알라딘* -> Adress : 211.111.219.12
-    <br>
-    *파리바게트* -> Adress : 13.125.57.70
-    <br><br>
      
+     ![실습결과](https://user-images.githubusercontent.com/77660379/119253310-94050e00-bbeb-11eb-945b-3473cbdf781d.JPG)
+    <br><br>
+
 ## 2. 실습과제 Review
 
 * ### **새로 배운 내용**
