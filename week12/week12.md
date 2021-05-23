@@ -90,22 +90,22 @@
 
 * ### **참고할 만한 내용**
 
-  * /etc/bind/*.com.db에 사용된 코드 각각의 의미
+  * mail 전송의 원리
    
-   ![week11_참고할 만한 내용](https://user-images.githubusercontent.com/77660379/118093750-db7be500-b408-11eb-8edb-d382a4c7c556.JPG)
+   ![메일전송의원리](https://user-images.githubusercontent.com/77660379/119254313-93bb4180-bbf0-11eb-90c7-28e2e45fc3a7.JPG)
    
-    [/etc/bind/*.com.db에 사용된 코드 의미](https://jerryk026.tistory.com/163)
+    [mail 전송의 원리](https://unabated.tistory.com/entry/mail-%EC%A0%84%EC%86%A1%EC%9D%98-%EC%9B%90%EB%A6%AC)
    
-    *$TTL*
-    => Time to Live.*.com으로 호스트 이름을 질의 했을 떄, 다른 네임 서버가 해당 IP 주소를 캐시에 저장하는 시간을 뜻함
+    *MUA(Mail User Agent)*
+    => 메일을 작성하여 보내는 프로그램
 
-    *3H*
-    => 3시간
+    *MTA(Mail Transfer Agent)*
+    => 이용자로부터 메일을 받아서, 외부로 전달하는 프로그램
 
-    *@*
-    => /etc/named.com에 정의된 john.com을 의미
+    *MDA(Mail Delivery Agent)*
+    => 전송받은 메일을 해당 사용자에게 전달
 
-    *SOA*
+    **
     => Start Of Authority. 권한의 시작, 괄호 안 숫자는 각각 버전 정보, 상위 네임 서버에 업데이트된 정보 요청하는 간격, 상위 네임 서버에 문제 발생 시 재접속 간격, 상위 네임 서버에 접속 불가시 이전 정보 파기 간격, 이 시간 이후에 정보가 삭제되는 데 걸리는 시간을 뜻함
 
    *NS*
