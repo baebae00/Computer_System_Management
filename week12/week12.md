@@ -27,26 +27,30 @@
 * ### **새로 배운 내용**
 
 ```
-1. Domain Name System, DNS
-    => 도메인 네임 시스템, 네임서버
-       -> 호스트의 도메인 이름을 호스트의 네트워크 주소로 바꾸거나. 그 반대의 변환을 수행
-          네트워크 상에서 컴퓨터를 식별하는 호스트명
-          좁은 의미로, 도메인 레지스트리에 등록된 이름
-          우분투는, BIND를 사용
-       Local Name Server
-       -> /etc/resolv/conf 에서 nameserver IP 로 설정된 서버
-       nslookup (name server lookup)
-       -> 네트워크 과리 명령 줄 인터페이스 도구
+1. Mail Server(SMTP, POP3, IMAP)
+    => Email 의 송수신에서 사용되는 프로토콜
+       -> SMTP, Simple Mail Transfer Protocol
+          클라이언트가 메일을 보내거나, 메일 서버끼리 메일을 주고 받을 때
+       POP3, Post Office Protocol
+       -> 메일 서버에 도착되어 있는 메일을 클라이언트로 가져올 때(서버에서 로컬 장치로 다운로드)
+       -> IMAP, Internet Mail Access Protocol
+          POP3 와 유사, 중앙 서버에서 동기화
+          모든 장치에서 동인한 이메일 확인 가능
 
-2. Catching only name server
-    => PC 에서 URL 로 IP 주소를 얻고자 할 때, 해당하는 URL 의 IP 주소를 알려주는 네임 서버 
-
-3. Round Robin DNS
-     => Master Nmae Server 마스터 네임 서버
-        -> 컴퓨터 ip주소를 알기 원할 떄 해당 컴퓨터의 IP 주소를 알려주는 네임 서버
-
-        Round Robin 라운드 로빈
-        -> 여러 대의 웹 서버를 운영하여 웹 클라이언트가 서비스를 요청할 경우 교대로 서비스를 실행하여, 웹 서버의 부하를 공평하게 나누는 방식
+2. Sendmail
+    => 인터넷에서 메일을 전송하기 위해 사용되는 패키지
+       MTA, Mail Transfer Agent
+       SMTP, Simple Mail Transport Protocol
+        -> 25번 포트 사용
+       주요 설정 파일
+        -> /user/bin/sendmail : 데몬 파일
+        -> /user/bin/makemap : 맵 생성 실헹파일
+        -> /var/spool/mqueue : 메일을 일시 저장하는 디렉터리
+        -> /var/spool/mail : 개별 메일을 보관하는 디렉터리
+        -> /etc/mail/access : relay 제한 및 설정 파일 (스팸 메일 방지 등)
+            RELAY : 관련 메일 수신/발신 허용
+            REJECT : 관련 메일 수신/발신 거부
+        -> /etc/mail/sendmail.cf : sendmail 설정 파일
 ```
 
 * ### **문제가 발생하거나 고민한 내용 + 해결 과정**
