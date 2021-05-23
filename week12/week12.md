@@ -57,12 +57,9 @@
 
 - **SSH 접속 RSA 공유키 충돌오류**
 
-    
-    ![오류1](https://user-images.githubusercontent.com/77660379/117954405-f2133500-b351-11eb-94d2-ff01963e3f44.JPG)
+    ![오류1](https://user-images.githubusercontent.com/77660379/119253652-2eb21c80-bbed-11eb-9033-0b50aa581982.JPG)
 
-    ![오류해결](https://user-images.githubusercontent.com/77660379/117954415-f4758f00-b351-11eb-9a95-5523cd2ccc74.JPG)
-
-    ![오류해결완료](https://user-images.githubusercontent.com/77660379/117954419-f5a6bc00-b351-11eb-9cb0-52a4c7f8ce14.JPG)
+    ![오류1해결](https://user-images.githubusercontent.com/77660379/119253655-31ad0d00-bbed-11eb-8ec2-a3c69e5e274a.JPG)
 
     ```
     문제발생 및 고민한 내용 : SSH 접속 RSA 공유키 충돌오류
