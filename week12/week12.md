@@ -72,23 +72,20 @@
     ````
     [RSA 공유키 충돌오류 참고](https://cpuu.postype.com/post/30065)
 
-- **라운드 로빈 방식의 웹 서버 구현 오류**
+- **E212: Can't open file for writing 오류**
 
-    ![오류2구동](https://user-images.githubusercontent.com/77660379/117954538-140cb780-b352-11eb-9a8d-e5175dff75bb.JPG)
-
-    ![오류2변경안됨](https://user-images.githubusercontent.com/77660379/117954548-166f1180-b352-11eb-8048-d04d92dfd55e.JPG)
-
-    ![오류2해결](https://user-images.githubusercontent.com/77660379/117954552-1707a800-b352-11eb-90bc-7666e3daa6de.JPG)
+    ![오류2](https://user-images.githubusercontent.com/77660379/119253735-8f415980-bbed-11eb-8eca-e9b4353cb815.JPG)
 
     ```
-    문제발생 및 고민한 내용 : nslookup 도메인 주소 출력 오류
+    문제발생 및 고민한 내용 : E212: Can't open file for writing 오류
 
-    해결 과정 : 기존의 구축된 웹 서버의 IP 주소 3개 확인 시도
-               -> nslookup을 통해 인터파크, 알라딘, 파리바게트 3개의 IP주소를 확인하려 했으나 변경이 안되어있음
-               -> 변경 사항을 저장하기 위한 restart 작업을 건너뛴 것이 문제였음
-               -> systemctl restart named 명령어를 통해 네임 서버를 다시 가동시켜 오류 해결
+    해결 과정 : vi 파일 저장 및 종료 시도
+               -> E212 오류 발생
+               -> 기본적으로 권한이 없는 곳에서 파일을 만들거나 수정할 때 생기는 문제
+               -> :q! 로 강제 종료 후 다시 작성할 수 있으나 이런 경우가 때때로 발생하기 때문에 해결 방법을 찾으려함
+               -> :w !sudo tee % > /dev/null 명령어를 통해 오류 해결 후 vi 파일 저장 및 종료
     ````
-    [nslookup 도메인 주소 출력 오류 참고](https://www.digitalocean.com/community/questions/sudo-ufw-status-return-inactive)
+    [E212: Can't open file for writing 오류 참고](https://noosphere.tistory.com/81)
 
 
 * ### **참고할 만한 내용**
