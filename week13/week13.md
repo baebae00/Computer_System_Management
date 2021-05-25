@@ -71,6 +71,7 @@
     ![오류1해결완료](https://user-images.githubusercontent.com/77660379/119448485-5e3b6300-bd6c-11eb-8def-63d45cf905d5.JPG)
 
     <br>
+
     *문제발생 및 고민한 내용* : 워드프레스 HTTP error 500 오류
 
     *해결 과정* : ssh@linux* 로 접속 시도
@@ -78,8 +79,9 @@
              -> 이유는 같은 IP 로 기존에 접속한 적이 있는 서버와 RSA 공유키를 교환한 상태에서, 서버가 바뀌었기 때문
              -> 이 경우는 운영자인 내가 고의적으로 변경한 것이기에, 해킹 등의 침해사고는 아님(스푸핑 X)
              -> ssh-keygen -R* 명령어를 통해 초기화시켜 오류 해결
-    <br><br>
     
+    <br>
+
     [Ubuntu 방화벽 작동상태 참고](http://blog.plura.io/?p=4580)
 
     [500 내부 서버 오류 참고](https://kor.go-travels.com/34459-500-internal-server-error-explained-2622938-8098952)
