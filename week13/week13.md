@@ -93,7 +93,7 @@
 
   * 제로보드XE
    
-    [제로보드XE](https://blog.naver.com/anysecure3/220619174287)
+    [제로보드XE란 및 설치방법](https://blog.naver.com/anysecure3/220619174287)
 
     *Xpress Engine 제로보드*
     => 보다 쉽고 편하게 컨텐츠를 작성하고 관리할 수 있는 컨텐츠 관리 시스템(CMS) <br>
