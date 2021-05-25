@@ -34,32 +34,24 @@
 
 * ### **새로 배운 내용**
 
-```
-1. Mail Server(SMTP, POP3, IMAP)
-    => Email 의 송수신에서 사용되는 프로토콜
-       -> SMTP, Simple Mail Transfer Protocol
-          클라이언트가 메일을 보내거나, 메일 서버끼리 메일을 주고 받을 때
-       POP3, Post Office Protocol
-       -> 메일 서버에 도착되어 있는 메일을 클라이언트로 가져올 때(서버에서 로컬 장치로 다운로드)
-       -> IMAP, Internet Mail Access Protocol
-          POP3 와 유사, 중앙 서버에서 동기화
-          모든 장치에서 동인한 이메일 확인 가능
+1. 웹 서버
+    => 웹 브라우저와 같은 클라이언트로 부터 HTTP 요청을 받아들이고, HTML 문서와 같은 웹 페이지를 반환하는 컴퓨터 프로그램
+       위와 같은 기능을 제공하는 컴퓨터 프로그램을 실행하는 컴퓨터
+       -> 아파치 Apache
+          오픈소스 HTTP Server
+          MPM(Multi Processing Module) 아키텍쳐 기반
+          클라이언트의 요청을 스레드 형태의 서버 프로세스로 생성하여 처리
+          1995년, 월드와이드웹 서버용 소프트웨어로 발표
+          1999년, 아파치소프트웨어 재단에서 지원
 
-2. Sendmail
-    => 인터넷에서 메일을 전송하기 위해 사용되는 패키지
-       MTA, Mail Transfer Agent
-       SMTP, Simple Mail Transport Protocol
-        -> 25번 포트 사용
-       주요 설정 파일
-        -> /user/bin/sendmail : 데몬 파일
-        -> /user/bin/makemap : 맵 생성 실헹파일
-        -> /var/spool/mqueue : 메일을 일시 저장하는 디렉터리
-        -> /var/spool/mail : 개별 메일을 보관하는 디렉터리
-        -> /etc/mail/access : relay 제한 및 설정 파일 (스팸 메일 방지 등)
-            RELAY : 관련 메일 수신/발신 허용
-            REJECT : 관련 메일 수신/발신 거부
-        -> /etc/mail/sendmail.cf : sendmail 설정 파일
-```
+2. LAMP
+    => Linux + Apache + MySQL + PHP
+       -> Apache HTTP Server
+          HTTP 웹 서버
+       -> MySQL
+          관계형 데이터베이스 관리 시스템
+       -> PHP(PHP: Hypertext Preprocessor)
+          동적 웹 페이지를 만들기 위해 설계된 PL
 
 * ### **문제가 발생하거나 고민한 내용 + 해결 과정**
 
@@ -97,51 +89,21 @@
 
     [워드프레스 HTTP error 500 문제 해결 참고](https://congjang.com/entry/%EC%9B%8C%EB%93%9C%ED%94%84%EB%A0%88%EC%8A%A4-HTTP-error-500%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0)
 
-- **E212: Can't open file for writing 오류**
-
-    ![오류2](https://user-images.githubusercontent.com/77660379/119253735-8f415980-bbed-11eb-8eca-e9b4353cb815.JPG)
-
-    ```
-    문제발생 및 고민한 내용 : E212: Can't open file for writing 오류
-
-    해결 과정 : vi 파일 저장 및 종료 시도
-               -> E212 오류 발생
-               -> 기본적으로 권한이 없는 곳에서 파일을 만들거나 수정할 때 생기는 문제
-               -> :q! 로 강제 종료 후 다시 작성할 수 있으나 이런 경우가 때때로 발생하기 때문에 해결 방법을 찾으려함
-               -> :w !sudo tee % > /dev/null 명령어를 통해 오류 해결 후 vi 파일 저장 및 종료
-    ````
-    [E212: Can't open file for writing 오류 참고](https://noosphere.tistory.com/81)
-
-
 * ### **참고할 만한 내용**
 
-  * mail 전송의 원리
+  * 제로보드XE
    
-   ![메일전송의원리](https://user-images.githubusercontent.com/77660379/119254313-93bb4180-bbf0-11eb-90c7-28e2e45fc3a7.JPG)
-   
-    [mail 전송의 원리](https://unabated.tistory.com/entry/mail-%EC%A0%84%EC%86%A1%EC%9D%98-%EC%9B%90%EB%A6%AC)
-   
-    *MUA(Mail User Agent)*
-    => 메일을 작성하여 보내는 프로그램
+    [제로보드XE](https://blog.naver.com/anysecure3/220619174287)
 
-    *MTA(Mail Transfer Agent)*
-    => 이용자로부터 메일을 받아서, 외부로 전달하는 프로그램
-
-    *MDA(Mail Delivery Agent)*
-    => 전송받은 메일을 해당 사용자에게 전달
-
-    *메일 전송의 원리*
-    => 사용자는 mail client와 같은 프로그램을 통해 mail 작성 후 , SMTP를 사용해 mail deamon으로 메시지 전송
-       -> mail deamon은 client의 주소를 분석하고 가장 가까운 mail server로 메시지와 정보를 보냄
-       -> 송신자가 보낸 편지가 송신자 측의 전자우편을 관리하는 mail server에 전달되면, mail server는 수신자의 전자우편 주소를 분석해 최단 경로를 찾아 근접한 mail server에 편지를 전달
-       -> 최종 수신자측의 mail server에 도착하기까지 연속적으로 전달하는 중계작업이 계속됨
-       -> 이러한 일련의 작업이 계속적으로 이루어진 후, 송수신자는 정확하게 메일 교환이 가능해짐
-
-   *MUA&MTA*
-    => 사용자가 직접 접하게 되는 것은 우편 대행자(MUAL: Mail User Agent)
-       이 메일은 크게 두가지로 발전
-        -> BSD(Berkely Software Distribution)에서 개발된 mailx
-        -> System V Unix에서 개발된 Mail
+    *Xpress Engine 제로보드*
+    => 보다 쉽고 편하게 컨텐츠를 작성하고 관리할 수 있는 컨텐츠 관리 시스템(CMS) <br>
+    'NHN' 에 인수되어 지원을 받고 있으며 명칭은 '제로보드xe' 혹은 Express Engine(XE)라고 부르고있음
+      -> 홈페이지 계정 내에 설치하는 설치형 게시판
+         홈페이지용 전자게시판 소프트웨어 또는 프로임워크로 PHP라는 언어로 쓰여짐
+         PHP(Personal Hypertext Preprocessor)
+          -> 하이퍼텍스트 생선언어에 포함되어 동작하는 스크립팅 언어
+         HTML(HyperText Markup Language)
+          -> 하이퍼텍스트를 작성하기 위해 개발된 웹 문서를 만들기 위한 기본적인 프로그래밍 언어의 한 종류
 
 * ### **회고 (+,-,!)**
 
