@@ -56,7 +56,7 @@
 
 * ### **문제가 발생하거나 고민한 내용 + 해결 과정**
 
-- **SSH 접속 RSA 공유키 충돌오류**
+- **워드프레스 HTTP error 500 오류**
 
     ![오류1](https://user-images.githubusercontent.com/77660379/119448473-5a0f4580-bd6c-11eb-85b0-1f17e7cee39f.JPG)
 
@@ -79,7 +79,13 @@
              -> 이 경우는 운영자인 내가 고의적으로 변경한 것이기에, 해킹 등의 침해사고는 아님(스푸핑 X)
              -> ssh-keygen -R* 명령어를 통해 초기화시켜 오류 해결
     ````
-    [RSA 공유키 충돌오류 참고](https://cpuu.postype.com/post/30065)
+    [Ubuntu 방화벽 작동상태 참고](http://blog.plura.io/?p=4580)
+
+    [500 내부 서버 오류 참고](https://kor.go-travels.com/34459-500-internal-server-error-explained-2622938-8098952)
+
+    [HTTP 500 내부 서버 오류 생성 참고](https://www.psychz.net/client/question/ko/http-500-internal-server-error.html2)
+
+    [워드프레스 HTTP error 500 문제 해결 참고](https://congjang.com/entry/%EC%9B%8C%EB%93%9C%ED%94%84%EB%A0%88%EC%8A%A4-HTTP-error-500%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0)
 
 - **E212: Can't open file for writing 오류**
 
