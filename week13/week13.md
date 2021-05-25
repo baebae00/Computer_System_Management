@@ -71,7 +71,7 @@
     ![오류1해결완료](https://user-images.githubusercontent.com/77660379/119448485-5e3b6300-bd6c-11eb-8def-63d45cf905d5.JPG)
 
     ```
-    문제발생 및 고민한 내용 : SSH 접속 RSA 공유키 충돌오류
+    문제발생 및 고민한 내용 : 워드프레스 HTTP error 500 오류
 
     해결 과정 : ssh@linux* 로 접속 시도
              -> '중간자 공격'에 대한 경고창 발생
