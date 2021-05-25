@@ -17,10 +17,15 @@
   * Server(b) 에 wordpress를 구축해 웹 페이지를 만든다.
     <br>
 
-    [wordpress 웹 페이지 제작 실습 영상](https://baedevelog.tistory.com/10)
+    [wordpress 웹 페이지 제작 실습 영상](https://baedevelog.tistory.com/11)
     <br>
      
-     ![실습결과](https://user-images.githubusercontent.com/77660379/119253310-94050e00-bbeb-11eb-945b-3473cbdf781d.JPG)
+     *웹 브라우저에서 워드프레스 설치 및 워드프레스 관리자 설정*<br>
+
+     ![1](https://user-images.githubusercontent.com/77660379/119457747-f9d1d100-bd76-11eb-8e80-94cb8f2de5d7.JPG)
+
+     ![2](https://user-images.githubusercontent.com/77660379/119457751-fb02fe00-bd76-11eb-9735-462b37b0627f.JPG)
+
     <br><br>
 
 ## 2. 실습과제 Review
