@@ -101,10 +101,6 @@
 
  * #### **VM ware 설정 - NAT / Bridged** <br>
 
-![NAT](https://user-images.githubusercontent.com/77660379/120384002-917b8480-c360-11eb-81e0-197a754836c7.JPG)
-
-![Bridged](https://user-images.githubusercontent.com/77660379/120384010-94767500-c360-11eb-9454-f1f20dbb869e.JPG)
-
   * NAT
    
     ![NAT](https://user-images.githubusercontent.com/77660379/120384002-917b8480-c360-11eb-81e0-197a754836c7.JPG)
