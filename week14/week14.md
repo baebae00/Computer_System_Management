@@ -60,6 +60,12 @@
 2. iptables
     => 시스템 관리자가 리눅스 커널 방화벽이 제공하는 테이블과 그것을 저장하는 체인, 규칙들을 구성할 수 있게 해주는 사용자 공간 응용 프로그램
 
+    [리눅스 서버에 방화벽을 활용하여 특정 IP만 접근하게 하는 방법 참고](https://uxgjs.tistory.com/162)
+
+    [리눅스 방화벽 상태 확인 by 명령어 실행 파악 참고](https://jootc.com/p/201808031482)
+
+    [iptables 개념 및 명령어 참고](https://linuxstory1.tistory.com/entry/iptables-%EA%B8%B0%EB%B3%B8-%EB%AA%85%EB%A0%B9%EC%96%B4-%EB%B0%8F-%EC%98%B5%EC%85%98-%EB%AA%85%EB%A0%B9%EC%96%B4)
+
 * ### **문제가 발생하거나 고민한 내용 + 해결 과정**
 
 - **워드프레스 HTTP error 500 오류**
