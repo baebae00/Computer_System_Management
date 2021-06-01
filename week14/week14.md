@@ -15,20 +15,20 @@
 
     [Host Computer에서 192.168.56.131 ip 주소로 접속 실습 영상](https://baedevelog.tistory.com/12)
     <br><br>
-     
+
      *Server(b)*
-     ![1](https://user-images.githubusercontent.com/77660379/119457747-f9d1d100-bd76-11eb-8e80-94cb8f2de5d7.JPG)
+     ![serber(b)](https://user-images.githubusercontent.com/77660379/120380549-465f7280-c35c-11eb-9198-cc021e5ca84e.JPG)
 
     <br>*Client*
 
-     ![2](https://user-images.githubusercontent.com/77660379/119457751-fb02fe00-bd76-11eb-9735-462b37b0627f.JPG)
+     ![client](https://user-images.githubusercontent.com/77660379/120380563-49f2f980-c35c-11eb-909d-7d27da10186a.JPG)
 
      <br>*Server*
 
-     ![3](https://user-images.githubusercontent.com/77660379/119458306-9005f700-bd77-11eb-92e3-cdd7868735d8.JPG)
+     ![server](https://user-images.githubusercontent.com/77660379/120380570-4bbcbd00-c35c-11eb-88b9-d7b390237696.JPG)
 
      <br>*wordpress*
-     ![3](https://user-images.githubusercontent.com/77660379/119458306-9005f700-bd77-11eb-92e3-cdd7868735d8.JPG)
+     ![웹서버](https://user-images.githubusercontent.com/77660379/120380575-4d868080-c35c-11eb-9e4f-4507dbad418d.JPG)
     <br><br>
 
 ## 2. 실습과제 Review
