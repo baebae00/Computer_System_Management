@@ -12,10 +12,9 @@
 * ### **방화벽 컴퓨터를 구축한 후 Server(b)에 웹 서버 구축 및 wordpress를 설치해 Host Computer에서 접속 실습**
   
 * #### **Host Computer에서 192.168.56.131 ip 주소로 접속** <br>
-    <br>
 
     [Host Computer에서 192.168.56.131 ip 주소로 접속 실습 영상](https://baedevelog.tistory.com/12)
-    <br>
+    <br><br>
      
      *Server(b)*
      ![1](https://user-images.githubusercontent.com/77660379/119457747-f9d1d100-bd76-11eb-8e80-94cb8f2de5d7.JPG)
