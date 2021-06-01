@@ -82,41 +82,50 @@
 
     ![오류1해결완료](https://user-images.githubusercontent.com/77660379/119448485-5e3b6300-bd6c-11eb-8def-63d45cf905d5.JPG)
 
-    <br>
+    <br><br>
 
-    ***문제발생 및 고민한 내용*** : 워드프레스 HTTP error 500 오류
+    ***문제발생 및 고민한 내용*** : FireFox > google.co.kr 접속 오류
 
-    ***해결 과정*** : 호스트 컴퓨터로 192.168.56.131 서버 접속 시도<br>
-             -> '페이지가 작동하지 않습니다. 현재 192.168.56.131에서 요청한 처리를 할 수 없습니다. HTTP ERROR 500' 이라는 오류창 발생<br>
+    ***해결 과정*** : 방화벽 컴퓨터 구현하기 - Server 설정 (정책 2)단계에서 google.co.kr에 접속하려 시도<br>
              -> ping을 날려 연결 확인을 해본 결과 문제 없음<br>
              -> 방화벽 확인했으나 문제 없음<br>
-             -> 이유는 php파일 중 하나의 소스에 문제가 있었기 때문<br>
-             -> 워드프레스 설정 파일 (wp-config.php)의 변경사항이 저장되어 있지 않았음<br>
-             -> wp-config.php파일의 23, 26, 29행의 변경사항을 수정 및 저장해 오류 해결
+             -> 이유는 Client 에서 인터넷 접속을 확인해야했는데 Server에서 확인하려했기 때문<br>
+             -> '내부 컴퓨터는 외부 인터넷을 사용할 수 있도록 한다.' 의 조건에 따라 규칙을 추가하고 마스커레이드를 허가했기 때문에 Client 에서 확인해야 잘 작동됨<br>
+             -> Client 서버로 인터넷에 접속해 오류 해결
     
-    [Ubuntu 방화벽 작동상태 참고](http://blog.plura.io/?p=4580)
+    ![오류1](https://user-images.githubusercontent.com/77660379/120382641-d7cfe400-c35e-11eb-87b7-cf3f66ba8465.JPG)
 
-    [500 내부 서버 오류 참고](https://kor.go-travels.com/34459-500-internal-server-error-explained-2622938-8098952)
-
-    [HTTP 500 내부 서버 오류 생성 참고](https://www.psychz.net/client/question/ko/http-500-internal-server-error.html2)
-
-    [워드프레스 HTTP error 500 문제 해결 참고](https://congjang.com/entry/%EC%9B%8C%EB%93%9C%ED%94%84%EB%A0%88%EC%8A%A4-HTTP-error-500%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0)
+    ![오류1해결](https://user-images.githubusercontent.com/77660379/120382645-db636b00-c35e-11eb-882d-ad8056738524.JPG)
 
 * ### **참고할 만한 내용**
 
-  * 제로보드XE
-   
-    [제로보드XE란 및 설치방법](https://blog.naver.com/anysecure3/220619174287)
+ * #### **VM ware 설정 - NAT / Bridged** <br>
 
-    *Xpress Engine 제로보드*
-    => 보다 쉽고 편하게 컨텐츠를 작성하고 관리할 수 있는 컨텐츠 관리 시스템(CMS) <br>
-    'NHN' 에 인수되어 지원을 받고 있으며 명칭은 '제로보드xe' 혹은 Express Engine(XE)라고 부르고있음
-      -> 홈페이지 계정 내에 설치하는 설치형 게시판
-         홈페이지용 전자게시판 소프트웨어 또는 프로임워크로 PHP라는 언어로 쓰여짐
-         PHP(Personal Hypertext Preprocessor)
-          -> 하이퍼텍스트 생선언어에 포함되어 동작하는 스크립팅 언어
-         HTML(HyperText Markup Language)
-          -> 하이퍼텍스트를 작성하기 위해 개발된 웹 문서를 만들기 위한 기본적인 프로그래밍 언어의 한 종류
+![NAT](https://user-images.githubusercontent.com/77660379/120384002-917b8480-c360-11eb-81e0-197a754836c7.JPG)
+
+![Bridged](https://user-images.githubusercontent.com/77660379/120384010-94767500-c360-11eb-9454-f1f20dbb869e.JPG)
+
+  * NAT
+   
+    ![NAT](https://user-images.githubusercontent.com/77660379/120384002-917b8480-c360-11eb-81e0-197a754836c7.JPG)
+
+    *NAT으로 설정되어 있는 경우*
+    => VM ware 가 설치된 컴퓨터를 마치 공유기처럼 사용하겠다는 의미<br>
+      -> 따라서 NAT로 Network Adapter사 설정된 경우, 리눅스나 윈도우에서 IP주소를 변경할 필요가 없음
+         내 컴퓨터에서 리눅스 IP로 통신할 수 있는 일종의 우체국 기능을 제공하기 때문 <br>
+
+  * Bridged
+   
+    ![Bridged](https://user-images.githubusercontent.com/77660379/120384010-94767500-c360-11eb-9454-f1f20dbb869e.JPG)
+
+    *Bridged로 설정되어 있는 경우*
+    => 리눅스 IP를 공유기 내부 IP로 설정하는 것도 가능하다는 의미<br>
+      -> 즉 리눅스가 실제 구동되고 있는 곳은 '내 컴퓨터' 지만, IP는 마치 공유기 내부 IP중 하나를 사용하도록 만드는 것
+         이 경우 '내 컴퓨터'의 IP Network ID와 동일하고, Host ID는 상이하도록 리눅스 IP를 수정해주면 됨
+
+    [리눅스 IP 변경 및 네트워크 설정](https://whitewing4139.tistory.com/95)
+
+    [NAT와 Bridged Networking 개념 정리](https://itmore.tistory.com/entry/NAT-%EC%99%80-Bridged-Networking-%EA%B0%9C%EB%85%90-%EC%A0%95%EB%A6%AC)
 
 * ### **회고 (+,-,!)**
 
