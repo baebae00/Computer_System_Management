@@ -68,21 +68,7 @@
 
 * ### **문제가 발생하거나 고민한 내용 + 해결 과정**
 
-- **워드프레스 HTTP error 500 오류**
-
-    ![오류1](https://user-images.githubusercontent.com/77660379/119448473-5a0f4580-bd6c-11eb-85b0-1f17e7cee39f.JPG)
-
-    ![오류1시도1](https://user-images.githubusercontent.com/77660379/119448479-5c719f80-bd6c-11eb-8f51-82abb7ee4194.JPG)
-
-    ![오류1시도2](https://user-images.githubusercontent.com/77660379/119448481-5d0a3600-bd6c-11eb-9bbb-b5b7999461d8.JPG)
-
-    ![오류1해결1](https://user-images.githubusercontent.com/77660379/119448482-5d0a3600-bd6c-11eb-89ae-1d3affce4421.JPG)
-
-    ![오류1해결2](https://user-images.githubusercontent.com/77660379/119448483-5da2cc80-bd6c-11eb-8c82-30109540064b.JPG)
-
-    ![오류1해결완료](https://user-images.githubusercontent.com/77660379/119448485-5e3b6300-bd6c-11eb-8def-63d45cf905d5.JPG)
-
-    <br><br>
+- **FireFox > google.co.kr 접속 오류**
 
     ***문제발생 및 고민한 내용*** : FireFox > google.co.kr 접속 오류
 
