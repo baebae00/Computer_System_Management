@@ -83,6 +83,23 @@
 
     ![오류1해결](https://user-images.githubusercontent.com/77660379/120382645-db636b00-c35e-11eb-882d-ad8056738524.JPG)
 
+- **172.16.1.20 접속 오류**
+
+    ***문제발생 및 고민한 내용*** : 172.16.1.20 접속 오류
+
+    ***해결 과정*** : 방화벽 컴퓨터 구현하기 - Server 설정 (정책 2)단계에서 google.co.kr에 접속하려 시도<br>
+             -> ping을 날려 연결 확인을 해본 결과 문제 없음<br>
+             -> 방화벽 확인했으나 문제 없음<br>
+             -> 이유는 Client 에서 인터넷 접속을 확인해야했는데 Server에서 확인하려했기 때문<br>
+             -> '내부 컴퓨터는 외부 인터넷을 사용할 수 있도록 한다.' 의 조건에 따라 규칙을 추가하고 마스커레이드를 허가했기 때문에 Client 에서 확인해야 잘 작동됨<br>
+             -> Client 서버로 인터넷에 접속해 오류 해결
+    
+    ![오류2_1](https://user-images.githubusercontent.com/77660379/120384904-b7edef80-c361-11eb-80a6-327edb5da21b.JPG)
+
+    ![오류2](https://user-images.githubusercontent.com/77660379/120384898-b6242c00-c361-11eb-92f8-604ea2b7bf54.JPG)
+
+    ![오류2해결1](https://user-images.githubusercontent.com/77660379/120384907-b7edef80-c361-11eb-9c8c-9857cdd051f8.JPG)
+
 * ### **참고할 만한 내용**
 
  * #### **VM ware 설정 - NAT / Bridged** <br>
