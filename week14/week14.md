@@ -66,6 +66,17 @@
 
     [iptables 개념 및 명령어 참고](https://linuxstory1.tistory.com/entry/iptables-%EA%B8%B0%EB%B3%B8-%EB%AA%85%EB%A0%B9%EC%96%B4-%EB%B0%8F-%EC%98%B5%EC%85%98-%EB%AA%85%EB%A0%B9%EC%96%B4)
 
+3. 도커 Docker
+    => 컨테이너 기반의 오픈소스 가상화 플랫폼
+       애플리케이션 환경에 영향을 받지 않고 실행해야할 때 사용
+       눈송이 서버들(Snowflask Servers, 동일한 기능을 수행하지만 운영 기록이 다른 서버들) 문제를 해결할 수 있음
+
+    ![docker](https://user-images.githubusercontent.com/77660379/120825291-33cf7e00-c594-11eb-933f-4d9c455bb06f.JPG)
+
+    [도커를 사용하는 이유 참고](https://www.44bits.io/ko/post/why-should-i-use-docker-container)
+
+    [Docker 장점 및 간단한 설명 참고](https://niceman.tistory.com/35)
+
 * ### **문제가 발생하거나 고민한 내용 + 해결 과정**
 
 - **FireFox > google.co.kr 접속 오류**
